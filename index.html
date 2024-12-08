@@ -1,0 +1,1010 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>NAACL 2025 Tutorial: Learning Language through Grounding</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" 
+        content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" 
+        content="NAACL 2025 Tutorial: Learning Language through Grounding.">
+    <meta name="keywords" 
+        content="Language Grounding, Machine Learning, Computational Linguistics, Natural Language Processing, Computer Science, Cognitive Science">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+        integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons/css/academicons.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Candara">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Permanent+Marker">
+    <link rel="stylesheet" href="static/css/main.css">
+</head>
+
+<body>
+    <header>
+        <div class="container header">
+            <div class="ftsubheader">
+                <a href="#bibtex">BibTeX</a> &nbsp;
+            </div>
+            <div class="ftsubheader">
+                <a href="#references">References</a> &nbsp;
+            </div>
+            <div class="ftsubheader">
+                <a href="#materials">Materials</a> &nbsp;
+            </div>
+            <div class="ftsubheader">
+                <a href="#main">Home</a> &nbsp;
+            </div>
+        </div>
+    </header>
+
+    <div id="main">
+        <div class="main-content">
+            <div id="main-content-container" class="container">
+
+                <div class="row">
+                    
+                    <div class="col-sm-12 col-md-12">
+                        <div id="main-info-container">
+                            <div class="col-name">
+
+                                <span class="name-with-icons">
+                                    <div class="name" style="font-weight:bold;">Learning Language through Grounding</div>
+                                    <div class="name" style="padding-top:5px; font-size: 22px; vertical-align: bottom;">
+                                        &nbsp; (NAACL 2025 Tutorial)</div>
+
+                                    <!-- <ul class="icons">
+                                        <li><a href="https://github.com/language-grounding" target="blank"><i
+                                                    class="fa fa-github"></i></a></li>
+                                        <li><a href="https://twitter.com/fredahshi" target="blank"><i
+                                                    class="fa fa-twitter"></i></a></li>
+                                        <li><a href="mailto:fhs@uwaterloo.ca"><i class="fa fa-envelope-o"></i></a></li>
+                                    </ul> -->
+
+                                </span>
+
+                                <p class="text">
+                                    <i>Grounding</i> has been a long-standing concept in natural language processing (NLP) and computational linguistics (CL).
+                                    This tutorial provides a historical overview and introduces recent advances in learning language through grounding, with a particular emphasis on the latter.
+                                    We will begin by tracing the history of grounding and presenting a unified perspective on the term. 
+                                    In Parts II to IV, we will delve into recent progress in learning lexical semantics, syntax, and complex meanings through various forms of grounding. 
+                                    We will conclude by discussing future directions and open challenges, particularly those related to the growing trend of large language models and scaling.
+                                </p>
+
+                                <div class="name" style="padding-top:5px; font-size: 22px; vertical-align: bottom;">Tutorial Instructors</div>
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-12 col-md-4 col-avatar" style="display: flex; align-items: center; flex-direction: column; text-align: center;">
+                        <img src="static/img/freda.jpg" class="avatar" style="width: 100px; height: 100px; border-radius: 50%;"/>
+                        <h6 class="subtitle" style="margin: 5px 0;">
+                            <a href="https://cs.uwaterloo.ca/~fhs/">Freda Shi</a> 
+                            &nbsp;
+                            <a href="https://scholar.google.com/citations?hl=en&user=jkDd-3QAAAAJ" target="blank"><i class="ai ai-google-scholar ai-lg"></i></a>
+                            <a href="https://twitter.com/fredahshi" target="blank"><i class="fa fa-twitter"></i></a>
+                            <a href="mailto:fhs@uwaterloo.ca"><i class="fa fa-envelope-o"></i></a>
+                        </h6>
+                        <h6 class="subtitle" style="margin: 2;">
+                            <i>University of Waterloo & Vector Institute, Canada CIFAR AI Chair</i>
+                        </h6>
+                    </div>
+                    
+                    <div class="col-sm-12 col-md-4 col-avatar" style="display: flex; align-items: center; flex-direction: column; text-align: center;">
+                        <img src="static/img/martin.jpg" class="avatar" style="width: 100px; height: 100px; border-radius: 50%;"/>
+                        <h6 class="subtitle" style="margin: 5px 0;">
+                            <a href="https://mars-tin.github.io/">Ziqiao Ma</a> 
+                            &nbsp;
+                            <a href="https://scholar.google.com/citations?user=WbybssYAAAAJ&hl=en" target="blank"><i class="ai ai-google-scholar ai-lg"></i></a>
+                            <a href="https://twitter.com/ziqiao_ma" target="blank"><i class="fa fa-twitter"></i></a>
+                            <a href="mailto:marstin@umich.edu"><i class="fa fa-envelope-o"></i></a>
+                        </h6>
+                        <h6 class="subtitle" style="margin: 2;">
+                            <i>University of Michigan</i>
+                        </h6>
+                    </div>
+
+                    <div class="col-sm-12 col-md-4 col-avatar" style="display: flex; align-items: center; flex-direction: column; text-align: center;">
+                        <img src="static/img/jiayuan.jpg" class="avatar" style="width: 100px; height: 100px; border-radius: 50%;"/>
+                        <h6 class="subtitle" style="margin: 5px 0;">
+                            <a href="https://jiayuanm.com/">Jiayuan Mao</a> 
+                            &nbsp;
+                            <a href="https://scholar.google.com/citations?user=-xaOIZIAAAAJ&hl=en" target="blank"><i class="ai ai-google-scholar ai-lg"></i></a>
+                            <a href="https://twitter.com/maojiayuan" target="blank"><i class="fa fa-twitter"></i></a>
+                            <a href="mailto:jiayuanm@mit.edu"><i class="fa fa-envelope-o"></i></a>
+                        </h6>
+                        <h6 class="subtitle" style="margin: 2;">
+                            <i>Massachusetts Institute of Technology</i>
+                        </h6>
+                    </div>                    
+
+                    <div class="col-sm-12 col-md-4 col-avatar" style="display: flex; align-items: center; flex-direction: column; text-align: center;">
+                        <img src="static/img/parisa.png" class="avatar" style="width: 100px; height: 100px; border-radius: 50%;"/>
+                        <h6 class="subtitle" style="margin: 5px 0;">
+                            <a href="https://www.cse.msu.edu/~kordjams/">Parisa Kordjamshidi</a> 
+                            &nbsp;
+                            <a href="https://scholar.google.com/citations?user=Ugo3NGgAAAAJ&hl=en" target="blank"><i class="ai ai-google-scholar ai-lg"></i></a>
+                            <a href="https://twitter.com/Kordjamshidi" target="blank"><i class="fa fa-twitter"></i></a>
+                            <a href="mailto:kordjams@msu.edu"><i class="fa fa-envelope-o"></i></a>
+                        </h6>
+                        <h6 class="subtitle" style="margin: 2;">
+                            <i>Michigan State University</i>
+                        </h6>
+                    </div>
+
+                    <div class="col-sm-12 col-md-4 col-avatar" style="display: flex; align-items: center; flex-direction: column; text-align: center;">
+                        <img src="static/img/joyce.jpg" class="avatar" style="width: 100px; height: 100px; border-radius: 50%;"/>
+                        <h6 class="subtitle" style="margin: 5px 0;">
+                            <a href="https://web.eecs.umich.edu/~chaijy/">Joyce Chai</a> 
+                            &nbsp;
+                            <a href="mailto:chaijy@umich.edu"><i class="fa fa-envelope-o"></i></a>
+                        </h6>
+                        <h6 class="subtitle" style="margin: 2;">
+                            <i>University of Michigan</i>
+                        </h6>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="main-content">
+
+        <div class="main-more-container" id="materials">
+            <div class="main-bio-container">
+
+                <h4 class="subtitle" style="margin-top:25px">Materials</h4>
+
+                <h5 class="subtitle" style="margin-top:25px">Part I (20 minutes): Introduction to grounding.</h5>
+
+                <p style="margin-bottom:5px;">
+                    We will review the history of grounding, and introduce the unified definition of grounding.
+                    In particular, grounding, in this tutorial, refers to processing the primary data with supervision from another source, where the two sources of data have positive mutual information.
+                    We will exemplify the definition through connection to existing work such as visual grounding, acoustic grounding, factual grounding, and cross-lingual grounding.
+                    We refer to <a href="https://aclanthology.org/2020.acl-tutorials.3/">ACL 2020 Tutorial 5</a> on for building common ground through communication.
+                </p>
+
+                <h5 class="subtitle" style="margin-top:25px">Part II (30 minutes): Learning lexicons through grounding.</h5>
+
+                <p style="margin-bottom:5px;">
+                    Word acquisition has been a fundamental problem in language acquisition concerned by both cognitive science and robotics.
+                    With the advancement of neural networks and multimodal machine learning, there has been work on learning the meanings of written or spoken words by grounding language to visual signals.
+                    Particularly, there has been work focusing on grounding verb semantics to the change of the physical world.
+                    Another line of work on learning lexicons through cross-lingual grounding.
+                </p>
+                <p style="margin-bottom:5px;">
+                    In the first 10 minutes, we will introduce the background and focus on recent advances in the remaining time.
+                    Work on learning lexical semantics through interaction or learning lexicon to compose sentence-level meanings will be deferred to Part IV.
+                </p>
+
+                <h5 class="subtitle" style="margin-top:25px">Part III (30 minutes): Learning syntax through grounding.</h5>
+
+                <p style="margin-bottom:5px;">
+                    Constituency parses of sentences can be learned by grounding to visual signals.
+                    Follow-up work has demonstrated the effectiveness of such visually grounded systems on learning variants of constituency and dependency grammars.
+                    On another line, <i>word alignment</i>, based cross-lingual transfer can also be considered as an instantiation of learning syntax through cross-lingual grounding, 
+                    where the text in the target language(s) is grounded to existing knowledge in the source language(s).
+                </p>
+                <p style="margin-bottom:5px;">
+                    A brief introduction of related syntactic knowledge, such as constituency, dependency, and combinatory categorial grammars, 
+                    will be presented in the first 10 minutes of this part to help the audience better understand the content.
+                    We will focus on recent approaches to learning syntax through visual grounding and cross-lingual grounding in the rest of the time.
+                    Efforts on joint learning of syntax and semantics will be delivered in Part IV.
+                </p>
+
+                <h5 class="subtitle" style="margin-top:25px">Part IV (60 minutes): Learning complex meanings (semantics and pragmatics) through grounding.</h5>
+
+                <p style="margin-bottom:5px;">
+                    It has attracted significant interest in learning and evaluating meaning acquisition in visually grounded settings.
+                    In addition to visual grounding, interaction is also a common source of supervision, where considerations regarding pragmatics and theory of mind are often taken into account.
+                    Similarly to what has been mentioned in Part II, cross-lingual transfer on sentence or document-level meanings, 
+                    particularly transferring knowledge from high-resource to low-resource languages, should also be considered as instantiations of cross-lingual grounding.
+          
+                </p>
+                <p style="margin-bottom:5px;">
+                    This part will cover three topics for 20 minutes each: learning semantics through grounding, learning pragmatics through grounded interaction,
+                    and learning cross-lingual text representations through cross-lingual grounding.
+                </p>
+
+                <h5 class="subtitle" style="margin-top:25px">Part V (15 minutes): Discussion on future directions and open problems.</h5>
+
+                <p style="margin-bottom:5px;">
+                    A key discussion for future directions centers around whether grounding should emerge naturally from scaling models or whether we should enforce grounded supervision to achieve more efficient learning.
+                    Additionally, the scope of grounding can be broadened beyond traditional modalities, 
+                    incorporating touch, olfaction, non-human sensors, video and temporal data, 3D environments, proprioception, episodic experiences, and even other forms of meta-cognition.
+                </p>
+
+            </div>
+        </div>
+
+        <div class="main-more-container" id="references">
+            <div id="main-pub-container">
+
+                <h4 class="subtitle">References
+                    <span style="padding-left: 30px;">
+                        <a id="publication-by-selected" href="javascript:;" , onClick="publicationBySelected();"
+                            style="font-size:18px;">show selected</a> /
+                        <a id="publication-by-date" href="javascript:;" , onClick="publicationByDate();"
+                            style="font-size:18px;">show all by date</a> /
+                        <a id="publication-by-topic" href="javascript:;" , onClick="publicationByTopic();"
+                            style="font-size:18px;">show all by topic</a>
+                    </span>
+                </h4>
+                <p class="subtitle-aux"><span class="bold">Topics:</span>
+                    <a href="#topic-syntax" onClick="return publicationByTopicSpecific(this)"
+                        data-topic="syntax">Syntax</a> /
+                    <a href="#topic-semantics" onClick="return publicationByTopicSpecific(this)"
+                        data-topic="semantics">Semantics</a> /
+                    <a href="#topic-multilingual-nlp" onClick="return publicationByTopicSpecific(this)"
+                        data-topic="multilingual-nlp">Multilingualism</a> /
+                    <a href="#topic-others" onClick="return publicationByTopicSpecific(this)"
+                        data-topic="others">Others</a> /
+                    <a href="#topic-theses" onClick="return publicationByTopicSpecific(this)"
+                        data-topic="thesis">Theses</a>
+                    <span class="note">(*: Equal Contribution)</span>
+                </p>
+
+            <div id="main-pub-card-container" class="activated hide">
+
+
+            <div class="pub-card" data-topic="thesis" data-year="2024" data-selected="true" data-all-topics=thesys/syntax/semantics/multilingual-nlp>
+                <div class="row">
+                    <div class="col-r col-xs-12 col-12">
+                        <div class="pub-card-body">
+                            <h5 class="title">Learning Language Structures through Grounding</h5>
+                            <h6 class="authors">
+                                <u>Freda Shi</u>
+                            </h6>
+                            <p class="info">
+                                <a href="#" class="conference">Ph.D. Thesis, Toyota Technological Institute at Chicago, June 2024</a>
+                                &nbsp;&nbsp;&nbsp;<a href=" https://arxiv.org/pdf/2406.09662.pdf" target="_blank">Paper</a><br>
+								<span class="highlight">Thesis of Distinction</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pub-card" data-topic="multilingual-nlp" data-year="2024" data-selected="true" data-all-topics=multilingual-nlp>
+                <div class="row">
+                    <div class="col-r col-xs-12 col-12">
+                        <div class="pub-card-body">
+                            <h5 class="title">LogogramNLP: Comparing Visual and Textual Representations of Ancient Logographic Writing Systems for NLP</h5>
+                            <h6 class="authors">
+                                <a href=" https://taineleau.cc/" target="_blank">Danlu Chen</a>,
+								<u>Freda Shi</u>,
+								<a href=" https://orcid.org/0009-0005-2878-1018" target="_blank">Aditi Agarwal</a>,
+								<a href=" https://diogenet.ucsd.edu/" target="_blank">Jacobo Myerston</a>,
+								<a href="https://cseweb.ucsd.edu/~tberg/" target="_blank">Taylor Berg-Kirkpatrick</a>
+                            </h6>
+                            <p class="info">
+                                <a href="https://2024.aclweb.org/" class="conference"> ACL 2024</a>
+                                
+								<span class="highlight">&nbsp;Best Paper Nominee</span> &nbsp;&nbsp;&nbsp;<a href=" " target="_blank">Paper</a> /
+								<a href="https://logogramnlp.github.io" target="_blank">Project Page</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pub-card" data-topic="syntax" data-year="2024" data-selected="true" data-all-topics=syntax>
+                <div class="row">
+                    <div class="col-r col-xs-12 col-12">
+                        <div class="pub-card-body">
+                            <h5 class="title">Structured Tree Alignment for Evaluation of (Speech) Constituency Parsing</h5>
+                            <h6 class="authors">
+                                <u>Freda Shi</u>,
+								<a href="https://home.ttic.edu/~kgimpel/index.html" target="_blank">Kevin Gimpel</a>,
+								<a href="https://home.ttic.edu/~klivescu" target="_blank">Karen Livescu</a>
+                            </h6>
+                            <p class="info">
+                                <a href="https://2024.aclweb.org/" class="conference">ACL 2024</a>
+                                <a href="https://home.ttic.edu/~freda/data/papers/structaiou.pdf" target="_blank">Paper</a> /
+								<a href="https://github.com/ExplorerFreda/struct-iou" target="_blank">Code</a> /
+								<a href="https://arxiv.org/abs/2402.13433" target="_blank">arXiv</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pub-card" data-topic="syntax" data-year="2023" data-selected="true" data-all-topics=syntax/multilingual-nlp>
+                <div class="row">
+                    <div class="col-r col-xs-12 col-12">
+                        <div class="pub-card-body">
+                            <h5 class="title">Audio-Visual Neural Syntax Acquisition</h5>
+                            <h6 class="authors">
+                                <a href="http://people.csail.mit.edu/clai24/" target="_blank">Cheng-I Jeff Lai</a>*,
+								<u>Freda Shi</u>*,
+								<a href="https://jasonppy.github.io/" target="_blank">Puyuan Peng</a>*,
+								<a href="https://people.csail.mit.edu/yoonkim/" target="_blank">Yoon Kim</a>,
+								<a href="https://home.ttic.edu/~kgimpel/index.html" target="_blank">Kevin Gimpel</a>,
+								Shiyu Chang,
+								Yung-Sung Chuang,
+								Saurabhchand Bhati,
+								David Cox,
+								<a href="https://www.cs.utexas.edu/~harwath/" target="_blank">David Harwath</a>,
+								Yang Zhang,
+								<a href="https://home.ttic.edu/~klivescu" target="_blank">Karen Livescu</a>,
+								<a href="http://groups.csail.mit.edu/sls/people/glass.shtml" target="_blank">James Glass</a>
+                            </h6>
+                            <p class="info">
+                                <a href="http://www.asru2023.org/" class="conference">ASRU 2023</a>
+                                <a href="https://arxiv.org/pdf/2310.07654" target="_blank">Paper</a> /
+								<a href="https://github.com/jefflai108/AV-NSL" target="_blank">Code</a> /
+								<a href="https://arxiv.org/abs/2310.07654" target="_blank">arXiv</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pub-card" data-topic="others" data-year="2023" data-selected="false" data-all-topics=others>
+                <div class="row">
+                    <div class="col-r col-xs-12 col-12">
+                        <div class="pub-card-body">
+                            <h5 class="title">NL-Augmenter: A Framework for Task-Sensitive Natural Language Augmentation</h5>
+                            <h6 class="authors">
+                                Kaustubh D. Dhole et al.
+                            </h6>
+                            <p class="info">
+                                <a href="https://nejlt.ep.liu.se/index" class="conference">NEJLT 2023</a>
+                                <a href="https://nejlt.ep.liu.se/article/view/4725" target="_blank">Paper</a> /
+								<a href="https://github.com/GEM-benchmark/NL-Augmenter" target="_blank">Code</a> /
+								<a href="https://arxiv.org/abs/2112.02721" target="_blank">arXiv</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pub-card" data-topic="semantics" data-year="2023" data-selected="false" data-all-topics=semantics/multilingual-nlp>
+                <div class="row">
+                    <div class="col-r col-xs-12 col-12">
+                        <div class="pub-card-body">
+                            <h5 class="title">Large Language Models Can Be Easily Distracted by Irrelevant Context</h5>
+                            <h6 class="authors">
+                                <u>Freda Shi</u>*,
+								<a href="https://jungyhuk.github.io/" target="_blank">Xinyun Chen</a>*,
+								<a href="https://kanishka.website/" target="_blank">Kanishka Misra</a>,
+								<a href="https://scholar.google.com/citations?user=zIop5SgAAAAJ&hl=en" target="_blank">Nathan Scales</a>,
+								<a href="https://scholar.google.com/citations?user=iZ5cY0AAAAAJ&hl=en&oi=ao" target="_blank">David Dohan</a>,
+								<a href="https://www.edchi.net/" target="_blank">Ed H. Chi</a>,
+								<a href="https://scholar.google.com/citations?hl=en&user=64RoFnUAAAAJ" target="_blank">Nathanael Schärli</a>,
+								<a href="https://dennyzhou.github.io/" target="_blank">Denny Zhou</a>
+                            </h6>
+                            <p class="info">
+                                <a href="#" class="conference">ICML 2023</a>
+                                <a href="https://openreview.net/pdf?id=JSZmoN03Op" target="_blank">Paper</a> /
+								<a href="https://arxiv.org/abs/2302.00093" target="_blank">arXiv</a> /
+								<a href="https://github.com/google-research-datasets/GSM-IC" target="_blank">Data</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pub-card" data-topic="multilingual-nlp" data-year="2023" data-selected="true" data-all-topics=multilingual-nlp>
+                <div class="row">
+                    <div class="col-r col-xs-12 col-12">
+                        <div class="pub-card-body">
+                            <h5 class="title">Language Models are Multilingual Chain-of-Thought Reasoners</h5>
+                            <h6 class="authors">
+                                <u>Freda Shi</u>*,
+								<a href="https://sites.google.com/view/msuzgun" target="_blank">Mirac Suzgun</a>*,
+								<a href="https://scholar.google.com/citations?user=t-VqdOUAAAAJ&hl=en" target="_blank">Markus Freitag</a>,
+								<a href="https://research.google/people/105995/" target="_blank">Xuezhi Wang</a>,
+								Suraj Srivats,
+								<a href="https://www.cs.dartmouth.edu/~soroush//" target="_blank">Soroush Vosoughi</a>,
+								<a href="https://hwchung27.github.io/" target="_blank">Hyung Won Chung</a>,
+								<a href="https://vanzytay.github.io/" target="_blank">Yi Tay</a>,
+								<a href="https://ruder.io/" target="_blank">Sebastian Ruder</a>,
+								<a href="https://dennyzhou.github.io/" target="_blank">Denny Zhou</a>,
+								<a href="http://www.dipanjandas.com/" target="_blank">Dipanjan Das</a>,
+								<a href="https://jasonwei20.github.io/" target="_blank">Jason Wei</a>
+                            </h6>
+                            <p class="info">
+                                <a href="https://iclr.cc/Conferences/2023" class="conference">ICLR 2023</a>
+                                <a href="https://openreview.net/pdf?id=fR3wGCk-IXp" target="_blank">Paper</a> /
+								<a href="https://arxiv.org/abs/2210.03057" target="_blank">arXiv</a> /
+								<a href="https://github.com/google-research/url-nlp/tree/main/mgsm" target="_blank">Data</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pub-card" data-topic="semantics" data-year="2023" data-selected="false" data-all-topics=semantics>
+                <div class="row">
+                    <div class="col-r col-xs-12 col-12">
+                        <div class="pub-card-body">
+                            <h5 class="title">InCoder: A Generative Model for Code Infilling and Synthesis</h5>
+                            <h6 class="authors">
+                                <a href="https://dpfried.github.io/" target="_blank">Daniel Fried</a>*,
+								<a href="https://scholar.google.com/citations?user=KxQfzRcAAAAJ&hl=en" target="_blank">Armen Aghajanyan</a>*,
+								<a href="https://jessylin.com/" target="_blank">Jessy Lin</a>,
+								<a href="http://www.sidaw.xyz/" target="_blank">Sida Wang</a>,
+								<a href="https://www.ericswallace.com/" target="_blank">Eric Wallace</a>,
+								<u>Freda Shi</u>,
+								<a href="https://ruiqi-zhong.github.io/" target="_blank">Ruiqi Zhong</a>,
+								<a href="https://scottyih.org/" target="_blank">Wen-tau Yih</a>,
+								<a href="https://www.cs.washington.edu/people/faculty/lsz/" target="_blank">Luke Zettlemoyer</a>,
+								<a href="https://research.facebook.com/people/lewis-mike/" target="_blank">Mike Lewis</a>
+                            </h6>
+                            <p class="info">
+                                <a href="https://iclr.cc/Conferences/2023" class="conference">ICLR 2023</a>
+                                <a href="https://openreview.net/pdf?id=hQwb-lbM6EL" target="_blank">Paper</a> /
+								<a href="https://github.com/dpfried/incoder" target="_blank">Code</a> /
+								<a href="https://arxiv.org/abs/2204.05999" target="_blank">arXiv</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pub-card" data-topic="semantics" data-year="2022" data-selected="true" data-all-topics=semantics>
+                <div class="row">
+                    <div class="col-r col-xs-12 col-12">
+                        <div class="pub-card-body">
+                            <h5 class="title">Natural Language to Code Translation with Execution</h5>
+                            <h6 class="authors">
+                                <u>Freda Shi</u>,
+								<a href="https://dpfried.github.io/" target="_blank">Daniel Fried</a>,
+								<a href="https://ai.facebook.com/people/marjan-ghazvininejad/" target="_blank">Marjan Ghazvininejad</a>,
+								<a href="https://www.cs.washington.edu/people/faculty/lsz/" target="_blank">Luke Zettlemoyer</a>,
+								<a href="http://www.sidaw.xyz/" target="_blank">Sida I. Wang</a>
+                            </h6>
+                            <p class="info">
+                                <a href="https://2022.emnlp.org" class="conference">EMNLP 2022</a>
+                                <a href="https://aclanthology.org/2022.emnlp-main.231.pdf" target="_blank">Paper</a> /
+								<a href="https://github.com/facebookresearch/mbr-exec" target="_blank">Code</a> /
+								<a href="https://arxiv.org/abs/2204.11454" target="_blank">arXiv</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pub-card" data-topic="multilingual-nlp" data-year="2022" data-selected="true" data-all-topics=multilingual-nlp>
+                <div class="row">
+                    <div class="col-r col-xs-12 col-12">
+                        <div class="pub-card-body">
+                            <h5 class="title">Substructure Distribution Projection for Zero-Shot Cross-Lingual Dependency Parsing</h5>
+                            <h6 class="authors">
+                                <u>Freda Shi</u>,
+								<a href="https://home.ttic.edu/~kgimpel/index.html" target="_blank">Kevin Gimpel</a>,
+								<a href="https://home.ttic.edu/~klivescu" target="_blank">Karen Livescu</a>
+                            </h6>
+                            <p class="info">
+                                <a href="https://2022.aclweb.org" class="conference">ACL 2022</a>
+                                <a href="https://aclanthology.org/2022.acl-long.452.pdf" target="_blank">Paper</a> /
+								<a href="https://aclanthology.org/attachments/2022.acl-long.452.software.zip" target="_blank">Code</a> /
+								<a href="https://arxiv.org/abs/2110.08538" target="_blank">arXiv</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pub-card" data-topic="syntax" data-year="2022" data-selected="false" data-all-topics=syntax>
+                <div class="row">
+                    <div class="col-r col-xs-12 col-12">
+                        <div class="pub-card-body">
+                            <h5 class="title">Deep Clustering of Text Representations for Supervision-Free Probing of Syntax</h5>
+                            <h6 class="authors">
+                                <a href="https://scholar.google.com/citations?user=jNjvdEgAAAAJ" target="_blank">Vikram Gupta</a>,
+								<u>Haoyue Shi</u>,
+								<a href="https://home.ttic.edu/~kgimpel/index.html" target="_blank">Kevin Gimpel</a>,
+								<a href="http://www.mrinmaya.io/" target="_blank">Mrinmaya Sachan</a>
+                            </h6>
+                            <p class="info">
+                                <a href="https://aaai.org/conference/aaai/aaai-22/" class="conference">AAAI 2022</a>
+                                <a href="https://ojs.aaai.org/index.php/AAAI/article/view/21317/21066" target="_blank">Paper</a> /
+								<a href="https://arxiv.org/abs/2010.12784" target="_blank">arXiv</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pub-card" data-topic="semantics" data-year="2021" data-selected="true" data-all-topics=semantics/syntax>
+                <div class="row">
+                    <div class="col-r col-xs-12 col-12">
+                        <div class="pub-card-body">
+                            <h5 class="title">Grammar-Based Grounded Lexicon Learning</h5>
+                            <h6 class="authors">
+                                <a href="https://jiayuanm.com" target="_blank">Jiayuan Mao</a>,
+								<u>Haoyue Shi</u>,
+								<a href="https://jiajunwu.com/" target="_blank">Jiajun Wu</a>,
+								<a href="http://www.mit.edu/~rplevy/" target="_blank">Roger P. Levy</a>,
+								<a href="http://web.mit.edu/cocosci/josh.html" target="_blank">Joshua B. Tenenbaum</a>
+                            </h6>
+                            <p class="info">
+                                <a href="https://neurips.cc/Conferences/2021" class="conference">NeurIPS 2021</a>
+                                <a href="https://openreview.net/pdf?id=VJQMp5xu24" target="_blank">Paper</a> /
+								<a href="https://arxiv.org/abs/2202.08806" target="_blank">arXiv</a> /
+								<a href="http://g2l2.csail.mit.edu/" target="_blank">Project Page</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pub-card" data-topic="semantics" data-year="2021" data-selected="true" data-all-topics=semantics/multilingual-nlp>
+                <div class="row">
+                    <div class="col-r col-xs-12 col-12">
+                        <div class="pub-card-body">
+                            <h5 class="title">Bilingual Lexicon Induction via Unsupervised Bitext Construction and Word Alignment</h5>
+                            <h6 class="authors">
+                                <u>Haoyue Shi</u>,
+								<a href="https://www.cs.washington.edu/people/faculty/lsz/" target="_blank">Luke Zettlemoyer</a>,
+								<a href="http://www.sidaw.xyz/" target="_blank">Sida I. Wang</a>
+                            </h6>
+                            <p class="info">
+                                <a href="https://2021.aclweb.org/" class="conference">ACL-IJCNLP 2021</a>
+                                
+								<span class="highlight">&nbsp;Best Paper Nominee</span> &nbsp;&nbsp;&nbsp;<a href="https://aclanthology.org/2021.acl-long.67.pdf" target="_blank">Paper</a> /
+								<a href="https://github.com/ExplorerFreda/bitext-lexind/tree/xlmr" target="_blank">Code</a> /
+								<a href="https://arxiv.org/abs/2101.00148" target="_blank">arXiv</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pub-card" data-topic="syntax" data-year="2021" data-selected="false" data-all-topics=syntax>
+                <div class="row">
+                    <div class="col-r col-xs-12 col-12">
+                        <div class="pub-card-body">
+                            <h5 class="title">Substructure Substitution: Structured Data Augmentation for NLP</h5>
+                            <h6 class="authors">
+                                <u>Haoyue Shi</u>,
+								<a href="https://home.ttic.edu/~klivescu" target="_blank">Karen Livescu</a>,
+								<a href="https://home.ttic.edu/~kgimpel/index.html" target="_blank">Kevin Gimpel</a>
+                            </h6>
+                            <p class="info">
+                                <a href="https://2021.aclweb.org/" class="conference">Findings of ACL-IJCNLP 2021</a>
+                                <a href="https://aclanthology.org/2021.findings-acl.307.pdf" target="_blank">Paper</a> /
+								<a href="https://github.com/ExplorerFreda/sub2-augmentation" target="_blank">Code</a> /
+								<a href="https://arxiv.org/abs/2101.00411" target="_blank">arXiv</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pub-card" data-topic="syntax" data-year="2020" data-selected="false" data-all-topics=syntax>
+                <div class="row">
+                    <div class="col-r col-xs-12 col-12">
+                        <div class="pub-card-body">
+                            <h5 class="title">On the Role of Supervision in Unsupervised Constituency Parsing</h5>
+                            <h6 class="authors">
+                                <u>Haoyue Shi</u>,
+								<a href="https://home.ttic.edu/~klivescu" target="_blank">Karen Livescu</a>,
+								<a href="https://home.ttic.edu/~kgimpel/index.html" target="_blank">Kevin Gimpel</a>
+                            </h6>
+                            <p class="info">
+                                <a href="#" class="conference">EMNLP 2020</a>
+                                <a href="https://aclanthology.org/2020.emnlp-main.614.pdf" target="_blank">Paper</a> /
+								<a href="https://arxiv.org/abs/2010.02423" target="_blank">arXiv</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pub-card" data-topic="syntax" data-year="2020" data-selected="false" data-all-topics=syntax_semantics>
+                <div class="row">
+                    <div class="col-r col-xs-12 col-12">
+                        <div class="pub-card-body">
+                            <h5 class="title">A Cross-Task Analysis of Text Span Representations</h5>
+                            <h6 class="authors">
+                                <a href="https://shtoshni.github.io/" target="_blank">Shubham Toshniwal</a>,
+								<u>Haoyue Shi</u>,
+								<a href="https://home.ttic.edu/~bshi" target="_blank">Bowen Shi</a>,
+								Lingyu Gao,
+								<a href="https://home.ttic.edu/~klivescu" target="_blank">Karen Livescu</a>,
+								<a href="https://home.ttic.edu/~kgimpel/index.html" target="_blank">Kevin Gimpel</a>
+                            </h6>
+                            <p class="info">
+                                <a href="https://sites.google.com/view/repl4nlp2020/home" class="conference">RepL4NLP 2020</a>
+                                <a href="https://www.aclweb.org/anthology/2020.repl4nlp-1.20.pdf" target="_blank">Paper</a> /
+								<a href="https://github.com/shtoshni92/span-rep" target="_blank">Code</a> /
+								<a href="https://arxiv.org/abs/2006.03866" target="_blank">arXiv</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pub-card" data-topic="syntax" data-year="2019" data-selected="true" data-all-topics=syntax/multilingual-nlp>
+                <div class="row">
+                    <div class="col-r col-xs-12 col-12">
+                        <div class="pub-card-body">
+                            <h5 class="title">Visually Grounded Neural Syntax Acquisition</h5>
+                            <h6 class="authors">
+                                <u>Haoyue Shi</u>*,
+								<a href="https://jiayuanm.com" target="_blank">Jiayuan Mao</a>*,
+								<a href="https://home.ttic.edu/~kgimpel/index.html" target="_blank">Kevin Gimpel</a>,
+								<a href="https://home.ttic.edu/~klivescu" target="_blank">Karen Livescu</a>
+                            </h6>
+                            <p class="info">
+                                <a href="https://acl2019.org/EN/index.xhtml" class="conference">ACL 2019</a>
+                                
+								<span class="highlight">&nbsp;Best Paper Nominee</span> &nbsp;&nbsp;&nbsp;<a href="https://aclanthology.org/P19-1180.pdf" target="_blank">Paper</a> /
+								<a href="https://github.com/ExplorerFreda/VGNSL" target="_blank">Code</a> /
+								<a href="https://arxiv.org/abs/1906.02890" target="_blank">arXiv</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pub-card" data-topic="syntax" data-year="2018" data-selected="true" data-all-topics=syntax>
+                <div class="row">
+                    <div class="col-r col-xs-12 col-12">
+                        <div class="pub-card-body">
+                            <h5 class="title">On Tree-Based Neural Sentence Modeling</h5>
+                            <h6 class="authors">
+                                <u>Haoyue Shi</u>,
+								<a href="https://zhouh.github.io/" target="_blank">Hao Zhou</a>,
+								<a href="https://scholar.google.com/citations?user=Vt1j3kEAAAAJ" target="_blank">Jiaze Chen</a>,
+								<a href="https://sites.cs.ucsb.edu/~lilei/" target="_blank">Lei Li</a>
+                            </h6>
+                            <p class="info">
+                                <a href="https://emnlp2018.org" class="conference">EMNLP 2018</a>
+                                <a href="https://aclanthology.org/D18-1492.pdf" target="_blank">Paper</a> /
+								<a href="https://github.com/ExplorerFreda/TreeEnc" target="_blank">Code</a> /
+								<a href="https://arxiv.org/abs/1808.09644" target="_blank">arXiv</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pub-card" data-topic="thesis" data-year="2018" data-selected="false" data-all-topics=semantics>
+                <div class="row">
+                    <div class="col-r col-xs-12 col-12">
+                        <div class="pub-card-body">
+                            <h5 class="title">On Multi-Sense Word Embeddings via Matrix Factorization and Matrix Transformation</h5>
+                            <h6 class="authors">
+                                <u>Haoyue Shi</u>
+                            </h6>
+                            <p class="info">
+                                <a href="#" class="conference">B.S. Thesis (in Simplified Chinese), Peking University School of EECS, May 2018</a>
+                                &nbsp;&nbsp;&nbsp;<a href="data/papers/bs_thesis.pdf" target="_blank">Paper</a><br>
+								<span class="highlight">Best Undergraduate Dissertation Award, PKU School of EECS</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pub-card" data-topic="semantics" data-year="2018" data-selected="true" data-all-topics=semantics>
+                <div class="row">
+                    <div class="col-r col-xs-12 col-12">
+                        <div class="pub-card-body">
+                            <h5 class="title">Learning Visually-Grounded Semantics from Contrastive Adversarial Samples</h5>
+                            <h6 class="authors">
+                                <u>Haoyue Shi</u>*,
+								<a href="https://jiayuanm.com" target="_blank">Jiayuan Mao</a>*,
+								<a href="http://tetexiao.com/" target="_blank">Tete Xiao</a>*,
+								<a href="https://yuningjiang.github.io/" target="_blank">Yuning Jiang</a>,
+								<a href="http://www.jiansun.org/" target="_blank">Jian Sun</a>
+                            </h6>
+                            <p class="info">
+                                <a href="http://www.coling2018.org/" class="conference">COLING 2018</a>
+                                <a href="https://aclanthology.org/C18-1315.pdf" target="_blank">Paper</a> /
+								<a href="https://github.com/ExplorerFreda/VSE-C" target="_blank">Code</a> /
+								<a href="https://arxiv.org/abs/1806.10348" target="_blank">arXiv</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pub-card" data-topic="semantics" data-year="2018" data-selected="false" data-all-topics=semantics>
+                <div class="row">
+                    <div class="col-r col-xs-12 col-12">
+                        <div class="pub-card-body">
+                            <h5 class="title">Constructing High Quality Sense-Specific Corpus and Word Embedding via Unsupervised Elimination of Pseudo Multi-Sense</h5>
+                            <h6 class="authors">
+                                <u>Haoyue Shi</u>,
+								Xihao Wang,
+								Yuqi Sun,
+								Junfeng Hu
+                            </h6>
+                            <p class="info">
+                                <a href="http://lrec2018.lrec-conf.org/en/" class="conference">LREC 2018</a>
+                                <a href="https://aclanthology.org/L18-1154.pdf" target="_blank">Paper</a> /
+								<a href="https://github.com/ExplorerFreda/Unsupervised-Pseudo-Multi-sense-Elimination" target="_blank">Code</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pub-card" data-topic="others" data-year="2017" data-selected="false" data-all-topics=others>
+                <div class="row">
+                    <div class="col-r col-xs-12 col-12">
+                        <div class="pub-card-body">
+                            <h5 class="title">Joint Saliency Estimation and Matching using Image Regions for Geo-Localization of Online Video</h5>
+                            <h6 class="authors">
+                                <u>Haoyue Shi</u>,
+								<a href="https://marshimarocj.github.io/" target="_blank">Jia Chen</a>,
+								<a href="http://www.cs.cmu.edu/~alex/" target="_blank">Alexander G. Hauptmann</a>
+                            </h6>
+                            <p class="info">
+                                <a href="#" class="conference">ICMR 2017</a>
+                                <a href="https://dl.acm.org/doi/epdf/10.1145/3078971.3078996" target="_blank">Paper</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pub-card" data-topic="semantics" data-year="2016" data-selected="false" data-all-topics=semantics>
+                <div class="row">
+                    <div class="col-r col-xs-12 col-12">
+                        <div class="pub-card-body">
+                            <h5 class="title">Real Multi-Sense or Pseudo Multi-Sense: An Approach to Improve Word Representation</h5>
+                            <h6 class="authors">
+                                <u>Haoyue Shi</u>,
+								Caihua Li,
+								Junfeng Hu
+                            </h6>
+                            <p class="info">
+                                <a href="https://sites.google.com/site/cl4lc2016/home" class="conference">COLING Workshop CL4LC 2016</a>
+                                <a href="https://aclanthology.org/W16-4109.pdf" target="_blank">Paper</a> /
+								<a href="https://arxiv.org/abs/1701.01574" target="_blank">arXiv</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+		</div>
+            </div>
+        </div>
+
+        <div class="main-more-container" id="bibtex">
+            <div id="main-pub-container">
+                <h4 class="subtitle" style="margin-top:25px">BibTeX</h4>
+<pre><code>@proceedings{naacl2025grounding,
+    author    = {Shi, Freda and Ma, Ziqiao and Mao, Jiayuan and Kordjamshidi, Parisa and Chai, Joyce},
+    title     = {Learning Language through Grounding},
+    booktitle = "Proceedings of the 2025 Annual Conference of the Nations of the Americas Chapter of the Association for Computational Linguistics (Volume 5: Tutorial Abstracts)",
+    year      = {2025},
+}</code></pre>
+            </div>
+        </div>
+
+        <div id="footer">
+            <div class="container">
+                &copy; 2018-2024 Freda Shi <br />
+            </div>
+        </div>
+
+
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"
+            integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
+            crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"
+            integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+            crossorigin="anonymous"></script>
+        <script type="text/javascript" src="static/js/jquery.color.min.js"></script>
+        <script type="text/javascript">
+            var recruit = 0;
+
+            function showRecruit() {
+                if (recruit == 0) {
+                    document.getElementById('recruit').style = 'display:inline-block';
+                } else {
+                    document.getElementById('recruit').style = 'display:none';
+                }
+                recruit = 1 - recruit;
+            }
+
+            $.fn.isInViewport = function () {
+                var elementTop = $(this).offset().top;
+                var elementBottom = elementTop + $(this).outerHeight();
+                var viewportTop = $(window).scrollTop();
+                var viewportBottom = viewportTop + $(window).height();
+                return elementBottom > viewportTop && elementTop < viewportBottom;
+            };
+
+            var allPublications = null;
+
+            function publicationBySelected() {
+                var a = $("#publication-by-selected")
+                if (a.hasClass("activated")) {
+                    return;
+                }
+
+                $("#main-pub-container .subtitle a").removeClass("activated");
+                $("#main-pub-container .subtitle-aux a").removeClass("activated");
+                a.addClass("activated");
+
+                $("#main-pub-card-container").html("");
+                for (var pubId = 0; pubId < allPublications.length; pubId++) {
+                    var pub = $(allPublications[pubId]);
+                    if (pub.data("selected") == true) {
+                        $("#main-pub-card-container").append(pub);
+                    }
+                }
+            }
+
+            function publicationByDate() {
+                var a = $("#publication-by-date")
+                if (a.hasClass("activated")) {
+                    return;
+                }
+
+                $("#main-pub-container .subtitle a").removeClass("activated");
+                $("#main-pub-container .subtitle-aux a").removeClass("activated");
+                a.addClass("activated");
+
+                $("#main-pub-card-container").html("");
+                for (var pubId = 0; pubId < allPublications.length; pubId++) {
+                    if (pubId == 0 || $(allPublications[pubId - 1]).data("year") != $(allPublications[pubId]).data("year")) {
+                        var year = $(allPublications[pubId]).data("year");
+                        $("#main-pub-card-container").append($("<h5 id='year-" + year.toString() + "' style='padding-top:20px; margin-bottom:10px;'>" + year.toString() + "</h5>"));
+                    }
+                    $("#main-pub-card-container").append(allPublications[pubId]);
+                }
+            }
+
+            function publicationByTopicInner() {
+                var a = $("#publication-by-topic")
+                if (a.hasClass("activated")) {
+                    return;
+                }
+                $("#main-pub-container .subtitle a").removeClass("activated");
+                a.addClass("activated");
+
+                $("#main-pub-card-container").html("");
+                for (var topicId in allTopics) {
+                    var topic = allTopics[topicId].name;
+                    var topicTitle = allTopics[topicId].title;
+                    $("#main-pub-card-container").append($("<h5 id='topic-" + topic + "' style='margin-top:-50px; border-top:70px solid transparent; margin-bottom:10px;'>" + topicTitle + "</h5>"));
+                    for (var pubId = 0; pubId < allPublications.length; pubId++) {
+                        var pub = $(allPublications[pubId]);
+                        if (pub.data("topic").indexOf(topic) != -1) {
+                            $("#main-pub-card-container").append(pub);
+                        }
+                    }
+                }
+            }
+
+            function publicationByTopicSpecificInner(a) {
+                if ($(a).hasClass("activated")) {
+                    return false;
+                }
+
+                $("#main-pub-container .subtitle-aux a").removeClass("activated");
+                $(a).addClass("activated");
+            }
+
+            function publicationByTopic() {
+                publicationByTopicInner();
+                publicationByTopicSpecificInner($("#main-pub-container .subtitle-aux a:first"));
+                return true;
+            }
+
+            function publicationByTopicSpecific(a) {
+                publicationByTopicInner();
+                publicationByTopicSpecificInner(a);
+
+                var hash = a.hash;
+                $(hash).prop('id', hash.substr(1) + '-noscroll');
+                window.location.hash = hash;
+                $(hash + '-noscroll').prop('id', hash.substr(1));
+
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                }, 1000, function () {
+                });
+
+                return false;
+            }
+
+            $(function () {
+                getRealSize = function (bgImg) {
+                    var img = new Image();
+                    img.src = bgImg.attr("src");
+                    var width = img.width,
+                        height = img.height;
+                    return {
+                        width: width,
+                        height: height
+                    }
+                };
+
+                getRealWindowSize = function () {
+                    var winWidth = null,
+                        winHeight = null;
+                    if (window.innerWidth) winWidth = window.innerWidth;
+                    else if ((document.body) && (document.body.clientWidth)) winWidth = document.body.clientWidth;
+                    if (window.innerHeight) winHeight = window.innerHeight;
+                    else if ((document.body) && (document.body.clientHeight)) winHeight = document.body.clientHeight;
+                    if (document.documentElement && document.documentElement.clientHeight && document.documentElement.clientWidth) {
+                        winHeight = document.documentElement.clientHeight;
+                        winWidth = document.documentElement.clientWidth
+                    }
+                    return {
+                        width: winWidth,
+                        height: winHeight
+                    }
+                };
+
+                fullBg = function () {
+                    var bgImg = $("#background");
+                    var mainContainer = $("#main");
+                    var firstFire = null;
+
+                    if (bgImg.length == 0) {
+                        return;
+                    }
+
+                    function resizeImg() {
+                        var realSize = getRealSize(bgImg);
+                        var imgWidth = realSize.width;
+                        var imgHeight = realSize.height;
+
+                        if (imgWidth == 0 || imgHeight == 0) {
+                            setTimeout(function () {
+                                resizeImg();
+                            }, 200);
+                        }
+
+                        console.log(realSize);
+                        var realWinSize = getRealWindowSize();
+                        var winWidth = realWinSize.width;
+                        var winHeight = realWinSize.height;
+                        var widthRatio = winWidth / imgWidth;
+                        var heightRatio = winHeight / imgHeight;
+                        console.log(realWinSize);
+                        if (widthRatio > heightRatio) {
+                            bgImg.width(imgWidth * widthRatio + 'px').height(imgHeight * widthRatio + 'px').css({
+                                'top':
+                                    -(imgHeight * widthRatio - winHeight) / 10 * 5 + 'px', 'left': '0'
+                            })
+                        } else {
+                            bgImg.width(imgWidth * heightRatio + 'px').height(imgHeight * heightRatio + 'px').css({
+                                'left':
+                                    -(imgWidth * heightRatio - winWidth) / 10 * 3 + 'px', 'top': '0'
+                            })
+                        }
+                    }
+
+                    resizeImg();
+                    window.onresize = function () {
+                        if (firstFire === null) {
+                            firstFire = setTimeout(function () {
+                                resizeImg();
+                                firstFire = null
+                            }, 100)
+                        }
+                    }
+                };
+
+                targetColor = $("#main-content-container .name").css("color");
+                animatedLink = function (speed) {
+                    $("#main-content-container .col-link li").hover(function () {
+                        $(this).find('.icon').animate({
+                            color: targetColor,
+                            borderColor: targetColor
+                        }, speed);
+                        $(this).find('.caption').animate({
+                            color: targetColor
+                        })
+                    }, function () {
+                        $(this).find('.icon').animate({
+                            borderColor: '#cccccc',
+                            color: '#cccccc'
+                        }, speed);
+                        $(this).find('.caption').animate({
+                            color: '#cccccc'
+                        })
+                    })
+                };
+
+                animatedLink(400);
+
+                allPublications = $("#main-pub-card-container .pub-card");
+                allTopicsLink = $("#main-pub-container .subtitle-aux a");
+                allTopics = [];
+                for (var topicId = 0; topicId < allTopicsLink.length; topicId++) {
+                    allTopics.push({ name: $(allTopicsLink[topicId]).data("topic"), title: $(allTopicsLink[topicId]).html() });
+                }
+
+                $("#publication-by-selected").click();
+                $("#main-pub-card-container").removeClass("hide");
+            });
+        </script>
+</body>
+
+
+</html>
