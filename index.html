@@ -164,7 +164,8 @@
                     We will review the history of grounding, and introduce the unified definition of grounding.
                     In particular, grounding, in this tutorial, refers to processing the primary data with supervision from another source, where the two sources of data have positive mutual information.
                     We will exemplify the definition through connection to existing work such as visual grounding, acoustic grounding, factual grounding, and cross-lingual grounding.
-                    We refer to <a href="https://aclanthology.org/2020.acl-tutorials.3/">ACL 2020 Tutorial 5</a> on for building common ground through communication.
+                    We refer to <a href="https://aclanthology.org/2020.acl-tutorials.3/">ACL 2020 Tutorial 5</a> on building common ground through communication, 
+                    and <a href="https://videolectures.net/videos/aaai2013_mooney_language_learning">AAAI 2013 Keynote Address</a> for early work on grounded language learning.
                 </p>
 
                 <h5 class="subtitle" style="margin-top:25px">Part II (30 minutes): Learning lexicons through grounding.</h5>
@@ -221,36 +222,45 @@
         </div>
 
         <div class="main-more-container" id="references">
+
             <div id="main-pub-container">
 
                 <h4 class="subtitle">References
                     <span style="padding-left: 30px;">
                         <a id="publication-by-selected" href="javascript:;" , onClick="publicationBySelected();"
                             style="font-size:18px;">show selected</a> /
-                        <a id="publication-by-date" href="javascript:;" , onClick="publicationByDate();"
-                            style="font-size:18px;">show all by date</a> /
+                        <!-- <a id="publication-by-date" href="javascript:;" , onClick="publicationByDate();"
+                            style="font-size:18px;">show all by date</a> / -->
                         <a id="publication-by-topic" href="javascript:;" , onClick="publicationByTopic();"
                             style="font-size:18px;">show all by topic</a>
                     </span>
                 </h4>
-                <p class="subtitle-aux"><span class="bold">Topics:</span>
+
+                <p class="subtitle-aux"><span class="bold">Grounding for...:</span>
+                    <a href="#topic-overview" onClick="return publicationByTopicSpecific(this)"
+                        data-topic="overview">Overview</a> /
+                    <a href="#topic-lexicon" onClick="return publicationByTopicSpecific(this)"
+                        data-topic="lexicon">Lexicon Learning</a> /
                     <a href="#topic-syntax" onClick="return publicationByTopicSpecific(this)"
-                        data-topic="syntax">Syntax</a> /
+                        data-topic="syntax">Syntax Learning</a> /
                     <a href="#topic-semantics" onClick="return publicationByTopicSpecific(this)"
-                        data-topic="semantics">Semantics</a> /
-                    <a href="#topic-multilingual-nlp" onClick="return publicationByTopicSpecific(this)"
-                        data-topic="multilingual-nlp">Multilingualism</a> /
-                    <a href="#topic-others" onClick="return publicationByTopicSpecific(this)"
-                        data-topic="others">Others</a> /
-                    <a href="#topic-theses" onClick="return publicationByTopicSpecific(this)"
-                        data-topic="thesis">Theses</a>
+                        data-topic="semantics">Semantics Learning</a> /
+                    <a href="#topic-pragmatics" onClick="return publicationByTopicSpecific(this)"
+                        data-topic="pragmatics">Pragmatics Learning</a> /
+                    <a href="#topic-crosslingual" onClick="return publicationByTopicSpecific(this)"
+                        data-topic="crosslingual">Crosslingual Learning</a> /
                     <span class="note">(*: Equal Contribution)</span>
                 </p>
 
             <div id="main-pub-card-container" class="activated hide">
 
+            <!-- Overview -->
+             <!-- Overview -->
+              <!-- Overview -->
+               <!-- Overview -->
+                <!-- Overview -->
 
-            <div class="pub-card" data-topic="thesis" data-year="2024" data-selected="true" data-all-topics=thesys/syntax/semantics/multilingual-nlp>
+            <div class="pub-card" data-topic="overview" data-year="2024" data-selected="true" data-all-topics=overview>
                 <div class="row">
                     <div class="col-r col-xs-12 col-12">
                         <div class="pub-card-body">
@@ -259,493 +269,684 @@
                                 <u>Freda Shi</u>
                             </h6>
                             <p class="info">
-                                <a href="#" class="conference">Ph.D. Thesis, Toyota Technological Institute at Chicago, June 2024</a>
-                                &nbsp;&nbsp;&nbsp;<a href=" https://arxiv.org/pdf/2406.09662.pdf" target="_blank">Paper</a><br>
-								<span class="highlight">Thesis of Distinction</span>
+                                Ph.D. Thesis, Toyota Technological Institute at Chicago. June 2024
+                                &nbsp;&nbsp;&nbsp;<a href="https://arxiv.org/pdf/2406.09662.pdf" target="_blank">Paper</a><br>
+                                <span class="highlight">Thesis of Distinction</span>
                             </p>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="pub-card" data-topic="multilingual-nlp" data-year="2024" data-selected="true" data-all-topics=multilingual-nlp>
+
+            <div class="pub-card" data-topic="overview" data-year="2021" data-selected="false" data-all-topics=overview>
                 <div class="row">
                     <div class="col-r col-xs-12 col-12">
                         <div class="pub-card-body">
-                            <h5 class="title">LogogramNLP: Comparing Visual and Textual Representations of Ancient Logographic Writing Systems for NLP</h5>
+                            <h5 class="title">Grounding 'Grounding' in NLP</h5>
                             <h6 class="authors">
-                                <a href=" https://taineleau.cc/" target="_blank">Danlu Chen</a>,
-								<u>Freda Shi</u>,
-								<a href=" https://orcid.org/0009-0005-2878-1018" target="_blank">Aditi Agarwal</a>,
-								<a href=" https://diogenet.ucsd.edu/" target="_blank">Jacobo Myerston</a>,
-								<a href="https://cseweb.ucsd.edu/~tberg/" target="_blank">Taylor Berg-Kirkpatrick</a>
+                                <u>Khyathi Raghavi Chandu, Yonatan Bisk, Alan W Black</u>
                             </h6>
                             <p class="info">
-                                <a href="https://2024.aclweb.org/" class="conference"> ACL 2024</a>
-                                
-								<span class="highlight">&nbsp;Best Paper Nominee</span> &nbsp;&nbsp;&nbsp;<a href=" " target="_blank">Paper</a> /
-								<a href="https://logogramnlp.github.io" target="_blank">Project Page</a>
+                                Findings of the Association for Computational Linguistics: ACL-IJCNLP (ACL Findings), 2021
+                                &nbsp;&nbsp;&nbsp;<a href="https://arxiv.org/pdf/2106.02192" target="_blank">Paper</a><br>
                             </p>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="pub-card" data-topic="syntax" data-year="2024" data-selected="true" data-all-topics=syntax>
+
+            <div class="pub-card" data-topic="overview" data-year="2020" data-selected="true" data-all-topics=overview>
                 <div class="row">
                     <div class="col-r col-xs-12 col-12">
                         <div class="pub-card-body">
-                            <h5 class="title">Structured Tree Alignment for Evaluation of (Speech) Constituency Parsing</h5>
+                            <h5 class="title">Experience Grounds Language</h5>
                             <h6 class="authors">
-                                <u>Freda Shi</u>,
-								<a href="https://home.ttic.edu/~kgimpel/index.html" target="_blank">Kevin Gimpel</a>,
-								<a href="https://home.ttic.edu/~klivescu" target="_blank">Karen Livescu</a>
+                                <u>Yonatan Bisk, Ari Holtzman, Jesse Thomason, Jacob Andreas, Yoshua Bengio, Joyce Chai, Mirella Lapata, Angeliki Lazaridou, Jonathan May, Aleksandr Nisnevich, Nicolas Pinto, Joseph Turian</u>
                             </h6>
                             <p class="info">
-                                <a href="https://2024.aclweb.org/" class="conference">ACL 2024</a>
-                                <a href="https://home.ttic.edu/~freda/data/papers/structaiou.pdf" target="_blank">Paper</a> /
-								<a href="https://github.com/ExplorerFreda/struct-iou" target="_blank">Code</a> /
-								<a href="https://arxiv.org/abs/2402.13433" target="_blank">arXiv</a>
+                                Empirical Methods in Natural Language Processing (EMNLP), 2020
+                                &nbsp;&nbsp;&nbsp;<a href="https://arxiv.org/pdf/2004.10151" target="_blank">Paper</a><br>
                             </p>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="pub-card" data-topic="syntax" data-year="2023" data-selected="true" data-all-topics=syntax/multilingual-nlp>
+
+            <div class="pub-card" data-topic="overview" data-year="2018" data-selected="true" data-all-topics=overview>
                 <div class="row">
                     <div class="col-r col-xs-12 col-12">
                         <div class="pub-card-body">
-                            <h5 class="title">Audio-Visual Neural Syntax Acquisition</h5>
+                            <h5 class="title">Language to Action: Towards Interactive Task Learning with Physical Agents</h5>
                             <h6 class="authors">
-                                <a href="http://people.csail.mit.edu/clai24/" target="_blank">Cheng-I Jeff Lai</a>*,
-								<u>Freda Shi</u>*,
-								<a href="https://jasonppy.github.io/" target="_blank">Puyuan Peng</a>*,
-								<a href="https://people.csail.mit.edu/yoonkim/" target="_blank">Yoon Kim</a>,
-								<a href="https://home.ttic.edu/~kgimpel/index.html" target="_blank">Kevin Gimpel</a>,
-								Shiyu Chang,
-								Yung-Sung Chuang,
-								Saurabhchand Bhati,
-								David Cox,
-								<a href="https://www.cs.utexas.edu/~harwath/" target="_blank">David Harwath</a>,
-								Yang Zhang,
-								<a href="https://home.ttic.edu/~klivescu" target="_blank">Karen Livescu</a>,
-								<a href="http://groups.csail.mit.edu/sls/people/glass.shtml" target="_blank">James Glass</a>
+                                <u>Joyce Y. Chai, Qiaozi Gao, Lanbo She, Shaohua Yang, Sari Saba-Sadiya, Guangyue Xu</u>
                             </h6>
                             <p class="info">
-                                <a href="http://www.asru2023.org/" class="conference">ASRU 2023</a>
-                                <a href="https://arxiv.org/pdf/2310.07654" target="_blank">Paper</a> /
-								<a href="https://github.com/jefflai108/AV-NSL" target="_blank">Code</a> /
-								<a href="https://arxiv.org/abs/2310.07654" target="_blank">arXiv</a>
+                                International Joint Conference on Artificial Intelligence (IJCAI), 2018
+                                &nbsp;&nbsp;&nbsp;<a href="https://www.ijcai.org/Proceedings/2018/0001.pdf" target="_blank">Paper</a><br>
+                                <span class="highlight">Invited Paper</span>
                             </p>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="pub-card" data-topic="others" data-year="2023" data-selected="false" data-all-topics=others>
+
+            <div class="pub-card" data-topic="overview" data-year="1991" data-selected="true" data-all-topics=overview>
                 <div class="row">
                     <div class="col-r col-xs-12 col-12">
                         <div class="pub-card-body">
-                            <h5 class="title">NL-Augmenter: A Framework for Task-Sensitive Natural Language Augmentation</h5>
+                            <h5 class="title">Grounding in Communication</h5>
                             <h6 class="authors">
-                                Kaustubh D. Dhole et al.
+                                <u>Herbert H. Clark, Susan E. Brennan</u>
                             </h6>
                             <p class="info">
-                                <a href="https://nejlt.ep.liu.se/index" class="conference">NEJLT 2023</a>
-                                <a href="https://nejlt.ep.liu.se/article/view/4725" target="_blank">Paper</a> /
-								<a href="https://github.com/GEM-benchmark/NL-Augmenter" target="_blank">Code</a> /
-								<a href="https://arxiv.org/abs/2112.02721" target="_blank">arXiv</a>
+                                Perspectives on Socially Shared Cognition, 1991
+                                &nbsp;&nbsp;&nbsp;<a href="https://web.stanford.edu/~clark/1990s/Clark,%20H.H.%20_%20Brennan,%20S.E.%20_Grounding%20in%20communication_%201991.pdf" target="_blank">Paper</a><br>
                             </p>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="pub-card" data-topic="semantics" data-year="2023" data-selected="false" data-all-topics=semantics/multilingual-nlp>
+
+            <div class="pub-card" data-topic="overview" data-year="1990" data-selected="true" data-all-topics=overview>
                 <div class="row">
                     <div class="col-r col-xs-12 col-12">
                         <div class="pub-card-body">
-                            <h5 class="title">Large Language Models Can Be Easily Distracted by Irrelevant Context</h5>
+                            <h5 class="title">The Symbol Grounding Problem</h5>
                             <h6 class="authors">
-                                <u>Freda Shi</u>*,
-								<a href="https://jungyhuk.github.io/" target="_blank">Xinyun Chen</a>*,
-								<a href="https://kanishka.website/" target="_blank">Kanishka Misra</a>,
-								<a href="https://scholar.google.com/citations?user=zIop5SgAAAAJ&hl=en" target="_blank">Nathan Scales</a>,
-								<a href="https://scholar.google.com/citations?user=iZ5cY0AAAAAJ&hl=en&oi=ao" target="_blank">David Dohan</a>,
-								<a href="https://www.edchi.net/" target="_blank">Ed H. Chi</a>,
-								<a href="https://scholar.google.com/citations?hl=en&user=64RoFnUAAAAJ" target="_blank">Nathanael Schärli</a>,
-								<a href="https://dennyzhou.github.io/" target="_blank">Denny Zhou</a>
+                                <u>Stevan Harnad</u>
                             </h6>
                             <p class="info">
-                                <a href="#" class="conference">ICML 2023</a>
-                                <a href="https://openreview.net/pdf?id=JSZmoN03Op" target="_blank">Paper</a> /
-								<a href="https://arxiv.org/abs/2302.00093" target="_blank">arXiv</a> /
-								<a href="https://github.com/google-research-datasets/GSM-IC" target="_blank">Data</a>
+                                Physica D: Nonlinear Phenomena, 1990
+                                &nbsp;&nbsp;&nbsp;<a href="https://arxiv.org/html/cs/9906002" target="_blank">Paper</a><br>
                             </p>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="pub-card" data-topic="multilingual-nlp" data-year="2023" data-selected="true" data-all-topics=multilingual-nlp>
-                <div class="row">
-                    <div class="col-r col-xs-12 col-12">
-                        <div class="pub-card-body">
-                            <h5 class="title">Language Models are Multilingual Chain-of-Thought Reasoners</h5>
-                            <h6 class="authors">
-                                <u>Freda Shi</u>*,
-								<a href="https://sites.google.com/view/msuzgun" target="_blank">Mirac Suzgun</a>*,
-								<a href="https://scholar.google.com/citations?user=t-VqdOUAAAAJ&hl=en" target="_blank">Markus Freitag</a>,
-								<a href="https://research.google/people/105995/" target="_blank">Xuezhi Wang</a>,
-								Suraj Srivats,
-								<a href="https://www.cs.dartmouth.edu/~soroush//" target="_blank">Soroush Vosoughi</a>,
-								<a href="https://hwchung27.github.io/" target="_blank">Hyung Won Chung</a>,
-								<a href="https://vanzytay.github.io/" target="_blank">Yi Tay</a>,
-								<a href="https://ruder.io/" target="_blank">Sebastian Ruder</a>,
-								<a href="https://dennyzhou.github.io/" target="_blank">Denny Zhou</a>,
-								<a href="http://www.dipanjandas.com/" target="_blank">Dipanjan Das</a>,
-								<a href="https://jasonwei20.github.io/" target="_blank">Jason Wei</a>
-                            </h6>
-                            <p class="info">
-                                <a href="https://iclr.cc/Conferences/2023" class="conference">ICLR 2023</a>
-                                <a href="https://openreview.net/pdf?id=fR3wGCk-IXp" target="_blank">Paper</a> /
-								<a href="https://arxiv.org/abs/2210.03057" target="_blank">arXiv</a> /
-								<a href="https://github.com/google-research/url-nlp/tree/main/mgsm" target="_blank">Data</a>
-                            </p>
+
+            <!-- Lexicon -->
+             <!-- Lexicon -->
+              <!-- Lexicon -->
+               <!-- Lexicon -->
+                <!-- Lexicon -->
+
+                <div class="pub-card" data-topic="lexicon" data-year="2023" data-selected="false" data-all-topics=lexicon>
+                    <div class="row">
+                        <div class="col-r col-xs-12 col-12">
+                            <div class="pub-card-body">
+                                <h5 class="title">World-to-Words: Grounded Open Vocabulary Acquisition through Fast Mapping in Vision-Language Models</h5>
+                                <h6 class="authors">
+                                    <u>Ziqiao Ma*, Jiayi Pan*, Joyce Chai</u>
+                                </h6>
+                                <p class="info">
+                                    Annual Meeting of the Association for Computational Linguistics (ACL), 2023
+                                    &nbsp;&nbsp;&nbsp;<a href="https://arxiv.org/pdf/2306.08685" target="_blank">Paper</a><br>
+                                    <span class="highlight">Outstanding Paper Award</span>
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="pub-card" data-topic="semantics" data-year="2023" data-selected="false" data-all-topics=semantics>
-                <div class="row">
-                    <div class="col-r col-xs-12 col-12">
-                        <div class="pub-card-body">
-                            <h5 class="title">InCoder: A Generative Model for Code Infilling and Synthesis</h5>
-                            <h6 class="authors">
-                                <a href="https://dpfried.github.io/" target="_blank">Daniel Fried</a>*,
-								<a href="https://scholar.google.com/citations?user=KxQfzRcAAAAJ&hl=en" target="_blank">Armen Aghajanyan</a>*,
-								<a href="https://jessylin.com/" target="_blank">Jessy Lin</a>,
-								<a href="http://www.sidaw.xyz/" target="_blank">Sida Wang</a>,
-								<a href="https://www.ericswallace.com/" target="_blank">Eric Wallace</a>,
-								<u>Freda Shi</u>,
-								<a href="https://ruiqi-zhong.github.io/" target="_blank">Ruiqi Zhong</a>,
-								<a href="https://scottyih.org/" target="_blank">Wen-tau Yih</a>,
-								<a href="https://www.cs.washington.edu/people/faculty/lsz/" target="_blank">Luke Zettlemoyer</a>,
-								<a href="https://research.facebook.com/people/lewis-mike/" target="_blank">Mike Lewis</a>
-                            </h6>
-                            <p class="info">
-                                <a href="https://iclr.cc/Conferences/2023" class="conference">ICLR 2023</a>
-                                <a href="https://openreview.net/pdf?id=hQwb-lbM6EL" target="_blank">Paper</a> /
-								<a href="https://github.com/dpfried/incoder" target="_blank">Code</a> /
-								<a href="https://arxiv.org/abs/2204.05999" target="_blank">arXiv</a>
-                            </p>
+
+                <div class="pub-card" data-topic="lexicon" data-year="2022" data-selected="false" data-all-topics=lexicon>
+                    <div class="row">
+                        <div class="col-r col-xs-12 col-12">
+                            <div class="pub-card-body">
+                                <h5 class="title">Word Discovery in Visually Grounded, Self-Supervised Speech Models</h5>
+                                <h6 class="authors">
+                                    <u>Puyuan Peng, David Harwath</u>
+                                </h6>
+                                <p class="info">
+                                    Annual Conference of the International Speech Communication Association (Interspeech), 2022
+                                    &nbsp;&nbsp;&nbsp;<a href="https://arxiv.org/pdf/2203.15081" target="_blank">Paper</a><br>
+                                    <span class="highlight">Oral</span>
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="pub-card" data-topic="semantics" data-year="2022" data-selected="true" data-all-topics=semantics>
-                <div class="row">
-                    <div class="col-r col-xs-12 col-12">
-                        <div class="pub-card-body">
-                            <h5 class="title">Natural Language to Code Translation with Execution</h5>
-                            <h6 class="authors">
-                                <u>Freda Shi</u>,
-								<a href="https://dpfried.github.io/" target="_blank">Daniel Fried</a>,
-								<a href="https://ai.facebook.com/people/marjan-ghazvininejad/" target="_blank">Marjan Ghazvininejad</a>,
-								<a href="https://www.cs.washington.edu/people/faculty/lsz/" target="_blank">Luke Zettlemoyer</a>,
-								<a href="http://www.sidaw.xyz/" target="_blank">Sida I. Wang</a>
-                            </h6>
-                            <p class="info">
-                                <a href="https://2022.emnlp.org" class="conference">EMNLP 2022</a>
-                                <a href="https://aclanthology.org/2022.emnlp-main.231.pdf" target="_blank">Paper</a> /
-								<a href="https://github.com/facebookresearch/mbr-exec" target="_blank">Code</a> /
-								<a href="https://arxiv.org/abs/2204.11454" target="_blank">arXiv</a>
-                            </p>
+
+                <div class="pub-card" data-topic="lexicon" data-year="2021" data-selected="false" data-all-topics=lexicon>
+                    <div class="row">
+                        <div class="col-r col-xs-12 col-12">
+                            <div class="pub-card-body">
+                                <h5 class="title">Cross-lingual Entity Alignment with Incidental Supervision</h5>
+                                <h6 class="authors">
+                                    <u>Muhao Chen, Weijia Shi, Ben Zhou, Dan Roth</u>
+                                </h6>
+                                <p class="info">
+                                    European Chapter of the Association for Computational Linguistics (EACL), 2021
+                                    &nbsp;&nbsp;&nbsp;<a href="https://arxiv.org/pdf/2005.00171" target="_blank">Paper</a><br>
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="pub-card" data-topic="multilingual-nlp" data-year="2022" data-selected="true" data-all-topics=multilingual-nlp>
-                <div class="row">
-                    <div class="col-r col-xs-12 col-12">
-                        <div class="pub-card-body">
-                            <h5 class="title">Substructure Distribution Projection for Zero-Shot Cross-Lingual Dependency Parsing</h5>
-                            <h6 class="authors">
-                                <u>Freda Shi</u>,
-								<a href="https://home.ttic.edu/~kgimpel/index.html" target="_blank">Kevin Gimpel</a>,
-								<a href="https://home.ttic.edu/~klivescu" target="_blank">Karen Livescu</a>
-                            </h6>
-                            <p class="info">
-                                <a href="https://2022.aclweb.org" class="conference">ACL 2022</a>
-                                <a href="https://aclanthology.org/2022.acl-long.452.pdf" target="_blank">Paper</a> /
-								<a href="https://aclanthology.org/attachments/2022.acl-long.452.software.zip" target="_blank">Code</a> /
-								<a href="https://arxiv.org/abs/2110.08538" target="_blank">arXiv</a>
-                            </p>
+
+                <div class="pub-card" data-topic="lexicon" data-year="2019" data-selected="false" data-all-topics=lexicon>
+                    <div class="row">
+                        <div class="col-r col-xs-12 col-12">
+                            <div class="pub-card-body">
+                                <h5 class="title">The Neuro-Symbolic Concept Learner: Interpreting Scenes, Words, and Sentences From Natural Supervision</h5>
+                                <h6 class="authors">
+                                    <u>Jiayuan Mao, Chuang Gan, Pushmeet Kohli, Joshua B. Tenenbaum, Jiajun Wu</u>
+                                </h6>
+                                <p class="info">
+                                    International Conference on Learning Representations (ICLR), 2019
+                                    &nbsp;&nbsp;&nbsp;<a href="https://arxiv.org/pdf/1904.12584" target="_blank">Paper</a><br>
+                                    <span class="highlight">Oral</span>
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="pub-card" data-topic="syntax" data-year="2022" data-selected="false" data-all-topics=syntax>
-                <div class="row">
-                    <div class="col-r col-xs-12 col-12">
-                        <div class="pub-card-body">
-                            <h5 class="title">Deep Clustering of Text Representations for Supervision-Free Probing of Syntax</h5>
-                            <h6 class="authors">
-                                <a href="https://scholar.google.com/citations?user=jNjvdEgAAAAJ" target="_blank">Vikram Gupta</a>,
-								<u>Haoyue Shi</u>,
-								<a href="https://home.ttic.edu/~kgimpel/index.html" target="_blank">Kevin Gimpel</a>,
-								<a href="http://www.mrinmaya.io/" target="_blank">Mrinmaya Sachan</a>
-                            </h6>
-                            <p class="info">
-                                <a href="https://aaai.org/conference/aaai/aaai-22/" class="conference">AAAI 2022</a>
-                                <a href="https://ojs.aaai.org/index.php/AAAI/article/view/21317/21066" target="_blank">Paper</a> /
-								<a href="https://arxiv.org/abs/2010.12784" target="_blank">arXiv</a>
-                            </p>
+
+                <div class="pub-card" data-topic="lexicon" data-year="2017" data-selected="false" data-all-topics=lexicon>
+                    <div class="row">
+                        <div class="col-r col-xs-12 col-12">
+                            <div class="pub-card-body">
+                                <h5 class="title">Verb Physics: Relative Physical Knowledge of Actions and Objects</h5>
+                                <h6 class="authors">
+                                    <u>Maxwell Forbes, Yejin Choi</u>
+                                </h6>
+                                <p class="info">
+                                    Annual Meeting of the Association for Computational Linguistics (ACL), 2017
+                                    &nbsp;&nbsp;&nbsp;<a href="https://arxiv.org/pdf/1706.03799" target="_blank">Paper</a><br>
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="pub-card" data-topic="semantics" data-year="2021" data-selected="true" data-all-topics=semantics/syntax>
-                <div class="row">
-                    <div class="col-r col-xs-12 col-12">
-                        <div class="pub-card-body">
-                            <h5 class="title">Grammar-Based Grounded Lexicon Learning</h5>
-                            <h6 class="authors">
-                                <a href="https://jiayuanm.com" target="_blank">Jiayuan Mao</a>,
-								<u>Haoyue Shi</u>,
-								<a href="https://jiajunwu.com/" target="_blank">Jiajun Wu</a>,
-								<a href="http://www.mit.edu/~rplevy/" target="_blank">Roger P. Levy</a>,
-								<a href="http://web.mit.edu/cocosci/josh.html" target="_blank">Joshua B. Tenenbaum</a>
-                            </h6>
-                            <p class="info">
-                                <a href="https://neurips.cc/Conferences/2021" class="conference">NeurIPS 2021</a>
-                                <a href="https://openreview.net/pdf?id=VJQMp5xu24" target="_blank">Paper</a> /
-								<a href="https://arxiv.org/abs/2202.08806" target="_blank">arXiv</a> /
-								<a href="http://g2l2.csail.mit.edu/" target="_blank">Project Page</a>
-                            </p>
+
+                <div class="pub-card" data-topic="lexicon" data-year="2017" data-selected="false" data-all-topics=lexicon>
+                    <div class="row">
+                        <div class="col-r col-xs-12 col-12">
+                            <div class="pub-card-body">
+                                <h5 class="title">Interactive Learning of Grounded Verb Semantics towards Human-Robot Communication</h5>
+                                <h6 class="authors">
+                                    <u>Lanbo She, Joyce Chai</u>
+                                </h6>
+                                <p class="info">
+                                    Annual Meeting of the Association for Computational Linguistics (ACL), 2017
+                                    &nbsp;&nbsp;&nbsp;<a href="https://aclanthology.org/P17-1150.pdf" target="_blank">Paper</a><br>
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="pub-card" data-topic="semantics" data-year="2021" data-selected="true" data-all-topics=semantics/multilingual-nlp>
-                <div class="row">
-                    <div class="col-r col-xs-12 col-12">
-                        <div class="pub-card-body">
-                            <h5 class="title">Bilingual Lexicon Induction via Unsupervised Bitext Construction and Word Alignment</h5>
-                            <h6 class="authors">
-                                <u>Haoyue Shi</u>,
-								<a href="https://www.cs.washington.edu/people/faculty/lsz/" target="_blank">Luke Zettlemoyer</a>,
-								<a href="http://www.sidaw.xyz/" target="_blank">Sida I. Wang</a>
-                            </h6>
-                            <p class="info">
-                                <a href="https://2021.aclweb.org/" class="conference">ACL-IJCNLP 2021</a>
-                                
-								<span class="highlight">&nbsp;Best Paper Nominee</span> &nbsp;&nbsp;&nbsp;<a href="https://aclanthology.org/2021.acl-long.67.pdf" target="_blank">Paper</a> /
-								<a href="https://github.com/ExplorerFreda/bitext-lexind/tree/xlmr" target="_blank">Code</a> /
-								<a href="https://arxiv.org/abs/2101.00148" target="_blank">arXiv</a>
-                            </p>
+
+                <div class="pub-card" data-topic="lexicon" data-year="2016" data-selected="false" data-all-topics=lexicon>
+                    <div class="row">
+                        <div class="col-r col-xs-12 col-12">
+                            <div class="pub-card-body">
+                                <h5 class="title">Physical Causality of Action Verbs in Grounded Language Understanding</h5>
+                                <h6 class="authors">
+                                    <u>Qiaozi Gao, Malcolm Doering, Shaohua Yang, Joyce Chai</u>
+                                </h6>
+                                <p class="info">
+                                    Annual Meeting of the Association for Computational Linguistics (ACL), 2016
+                                    &nbsp;&nbsp;&nbsp;<a href="https://aclanthology.org/P16-1171.pdf" target="_blank">Paper</a><br>
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="pub-card" data-topic="syntax" data-year="2021" data-selected="false" data-all-topics=syntax>
-                <div class="row">
-                    <div class="col-r col-xs-12 col-12">
-                        <div class="pub-card-body">
-                            <h5 class="title">Substructure Substitution: Structured Data Augmentation for NLP</h5>
-                            <h6 class="authors">
-                                <u>Haoyue Shi</u>,
-								<a href="https://home.ttic.edu/~klivescu" target="_blank">Karen Livescu</a>,
-								<a href="https://home.ttic.edu/~kgimpel/index.html" target="_blank">Kevin Gimpel</a>
-                            </h6>
-                            <p class="info">
-                                <a href="https://2021.aclweb.org/" class="conference">Findings of ACL-IJCNLP 2021</a>
-                                <a href="https://aclanthology.org/2021.findings-acl.307.pdf" target="_blank">Paper</a> /
-								<a href="https://github.com/ExplorerFreda/sub2-augmentation" target="_blank">Code</a> /
-								<a href="https://arxiv.org/abs/2101.00411" target="_blank">arXiv</a>
-                            </p>
+
+                <div class="pub-card" data-topic="lexicon" data-year="2016" data-selected="false" data-all-topics=lexicon>
+                    <div class="row">
+                        <div class="col-r col-xs-12 col-12">
+                            <div class="pub-card-body">
+                                <h5 class="title">Incremental Acquisition of Verb Hypothesis Space towards Physical World Interaction</h5>
+                                <h6 class="authors">
+                                    <u>Lanbo She, Joyce Chai</u>
+                                </h6>
+                                <p class="info">
+                                    Annual Meeting of the Association for Computational Linguistics (ACL), 2016
+                                    &nbsp;&nbsp;&nbsp;<a href="https://aclanthology.org/P16-1011.pdf" target="_blank">Paper</a><br>
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="pub-card" data-topic="syntax" data-year="2020" data-selected="false" data-all-topics=syntax>
-                <div class="row">
-                    <div class="col-r col-xs-12 col-12">
-                        <div class="pub-card-body">
-                            <h5 class="title">On the Role of Supervision in Unsupervised Constituency Parsing</h5>
-                            <h6 class="authors">
-                                <u>Haoyue Shi</u>,
-								<a href="https://home.ttic.edu/~klivescu" target="_blank">Karen Livescu</a>,
-								<a href="https://home.ttic.edu/~kgimpel/index.html" target="_blank">Kevin Gimpel</a>
-                            </h6>
-                            <p class="info">
-                                <a href="#" class="conference">EMNLP 2020</a>
-                                <a href="https://aclanthology.org/2020.emnlp-main.614.pdf" target="_blank">Paper</a> /
-								<a href="https://arxiv.org/abs/2010.02423" target="_blank">arXiv</a>
-                            </p>
+
+            <!-- Syntax -->
+             <!-- Syntax -->
+              <!-- Syntax -->
+               <!-- Syntax -->
+                <!-- Syntax -->
+
+                <div class="pub-card" data-topic="syntax" data-year="2024" data-selected="false" data-all-topics=syntax>
+                    <div class="row">
+                        <div class="col-r col-xs-12 col-12">
+                            <div class="pub-card-body">
+                                <h5 class="title">Reframing Linguistic Bootstrapping as Joint Inference Using Visually-Grounded Grammar Induction Models</h5>
+                                <h6 class="authors">
+                                    <u>Eva Portelance, Siva Reddy, Timothy J. O'Donnell</u>
+                                </h6>
+                                <p class="info">
+                                    Preprint, 2024
+                                    &nbsp;&nbsp;&nbsp;<a href="https://arxiv.org/pdf/2406.11977" target="_blank">Paper</a><br>
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="pub-card" data-topic="syntax" data-year="2020" data-selected="false" data-all-topics=syntax_semantics>
-                <div class="row">
-                    <div class="col-r col-xs-12 col-12">
-                        <div class="pub-card-body">
-                            <h5 class="title">A Cross-Task Analysis of Text Span Representations</h5>
-                            <h6 class="authors">
-                                <a href="https://shtoshni.github.io/" target="_blank">Shubham Toshniwal</a>,
-								<u>Haoyue Shi</u>,
-								<a href="https://home.ttic.edu/~bshi" target="_blank">Bowen Shi</a>,
-								Lingyu Gao,
-								<a href="https://home.ttic.edu/~klivescu" target="_blank">Karen Livescu</a>,
-								<a href="https://home.ttic.edu/~kgimpel/index.html" target="_blank">Kevin Gimpel</a>
-                            </h6>
-                            <p class="info">
-                                <a href="https://sites.google.com/view/repl4nlp2020/home" class="conference">RepL4NLP 2020</a>
-                                <a href="https://www.aclweb.org/anthology/2020.repl4nlp-1.20.pdf" target="_blank">Paper</a> /
-								<a href="https://github.com/shtoshni92/span-rep" target="_blank">Code</a> /
-								<a href="https://arxiv.org/abs/2006.03866" target="_blank">arXiv</a>
-                            </p>
+
+                <div class="pub-card" data-topic="syntax" data-year="2023" data-selected="false" data-all-topics=syntax>
+                    <div class="row">
+                        <div class="col-r col-xs-12 col-12">
+                            <div class="pub-card-body">
+                                <h5 class="title">Audio-Visual Neural Syntax Acquisition</h5>
+                                <h6 class="authors">
+                                    <u>Cheng-I Jeff Lai*, Freda Shi*, Puyuan Peng*, Yoon Kim, Kevin Gimpel, Shiyu Chang, Yung-Sung Chuang, Saurabhchand Bhati, David Cox, David Harwath, Yang Zhang, Karen Livescu, James Glass</u>
+                                </h6>
+                                <p class="info">
+                                    IEEE Workshop on Automatic Speech Recognition and Understanding (ASRU), 2023
+                                    &nbsp;&nbsp;&nbsp;<a href="https://arxiv.org/pdf/2310.07654" target="_blank">Paper</a><br>
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="pub-card" data-topic="syntax" data-year="2019" data-selected="true" data-all-topics=syntax/multilingual-nlp>
-                <div class="row">
-                    <div class="col-r col-xs-12 col-12">
-                        <div class="pub-card-body">
-                            <h5 class="title">Visually Grounded Neural Syntax Acquisition</h5>
-                            <h6 class="authors">
-                                <u>Haoyue Shi</u>*,
-								<a href="https://jiayuanm.com" target="_blank">Jiayuan Mao</a>*,
-								<a href="https://home.ttic.edu/~kgimpel/index.html" target="_blank">Kevin Gimpel</a>,
-								<a href="https://home.ttic.edu/~klivescu" target="_blank">Karen Livescu</a>
-                            </h6>
-                            <p class="info">
-                                <a href="https://acl2019.org/EN/index.xhtml" class="conference">ACL 2019</a>
-                                
-								<span class="highlight">&nbsp;Best Paper Nominee</span> &nbsp;&nbsp;&nbsp;<a href="https://aclanthology.org/P19-1180.pdf" target="_blank">Paper</a> /
-								<a href="https://github.com/ExplorerFreda/VGNSL" target="_blank">Code</a> /
-								<a href="https://arxiv.org/abs/1906.02890" target="_blank">arXiv</a>
-                            </p>
+
+                <div class="pub-card" data-topic="syntax" data-year="2021" data-selected="false" data-all-topics=syntax>
+                    <div class="row">
+                        <div class="col-r col-xs-12 col-12">
+                            <div class="pub-card-body">
+                                <h5 class="title">PPT: Parsimonious Parser Transfer for Unsupervised Cross-Lingual Adaptation</h5>
+                                <h6 class="authors">
+                                    <u>Kemal Kurniawan, Lea Frermann, Philip Schulz, Trevor Cohn</u>
+                                </h6>
+                                <p class="info">
+                                    European Chapter of the Association for Computational Linguistics (EACL), 2021
+                                    &nbsp;&nbsp;&nbsp;<a href="https://aclanthology.org/2021.eacl-main.254.pdf" target="_blank">Paper</a><br>
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="pub-card" data-topic="syntax" data-year="2018" data-selected="true" data-all-topics=syntax>
-                <div class="row">
-                    <div class="col-r col-xs-12 col-12">
-                        <div class="pub-card-body">
-                            <h5 class="title">On Tree-Based Neural Sentence Modeling</h5>
-                            <h6 class="authors">
-                                <u>Haoyue Shi</u>,
-								<a href="https://zhouh.github.io/" target="_blank">Hao Zhou</a>,
-								<a href="https://scholar.google.com/citations?user=Vt1j3kEAAAAJ" target="_blank">Jiaze Chen</a>,
-								<a href="https://sites.cs.ucsb.edu/~lilei/" target="_blank">Lei Li</a>
-                            </h6>
-                            <p class="info">
-                                <a href="https://emnlp2018.org" class="conference">EMNLP 2018</a>
-                                <a href="https://aclanthology.org/D18-1492.pdf" target="_blank">Paper</a> /
-								<a href="https://github.com/ExplorerFreda/TreeEnc" target="_blank">Code</a> /
-								<a href="https://arxiv.org/abs/1808.09644" target="_blank">arXiv</a>
-                            </p>
+
+                <div class="pub-card" data-topic="syntax" data-year="2021" data-selected="false" data-all-topics=syntax>
+                    <div class="row">
+                        <div class="col-r col-xs-12 col-12">
+                            <div class="pub-card-body">
+                                <h5 class="title">“Wikily” Supervised Neural Translation Tailored to Cross-Lingual Tasks</h5>
+                                <h6 class="authors">
+                                    <u>Mohammad Sadegh Rasooli, Chris Callison-Burch, Derry Tanti Wijaya</u>
+                                </h6>
+                                <p class="info">
+                                    Empirical Methods in Natural Language Processing (EMNLP), 2021
+                                    &nbsp;&nbsp;&nbsp;<a href="https://aclanthology.org/2021.emnlp-main.124.pdf" target="_blank">Paper</a><br>
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="pub-card" data-topic="thesis" data-year="2018" data-selected="false" data-all-topics=semantics>
-                <div class="row">
-                    <div class="col-r col-xs-12 col-12">
-                        <div class="pub-card-body">
-                            <h5 class="title">On Multi-Sense Word Embeddings via Matrix Factorization and Matrix Transformation</h5>
-                            <h6 class="authors">
-                                <u>Haoyue Shi</u>
-                            </h6>
-                            <p class="info">
-                                <a href="#" class="conference">B.S. Thesis (in Simplified Chinese), Peking University School of EECS, May 2018</a>
-                                &nbsp;&nbsp;&nbsp;<a href="data/papers/bs_thesis.pdf" target="_blank">Paper</a><br>
-								<span class="highlight">Best Undergraduate Dissertation Award, PKU School of EECS</span>
-                            </p>
+
+                <div class="pub-card" data-topic="syntax" data-year="2021" data-selected="false" data-all-topics=syntax>
+                    <div class="row">
+                        <div class="col-r col-xs-12 col-12">
+                            <div class="pub-card-body">
+                                <h5 class="title">Dependency Induction Through the Lens of Visual Perception</h5>
+                                <h6 class="authors">
+                                    <u>Ruisi Su, Shruti Rijhwani, Hao Zhu, Junxian He, Xinyu Wang, Yonatan Bisk, Graham Neubig</u>
+                                </h6>
+                                <p class="info">
+                                    Conference on Computational Natural Language Learning (CoNLL), 2021
+                                    &nbsp;&nbsp;&nbsp;<a href="https://arxiv.org/pdf/2109.09790" target="_blank">Paper</a><br>
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="pub-card" data-topic="semantics" data-year="2018" data-selected="true" data-all-topics=semantics>
-                <div class="row">
-                    <div class="col-r col-xs-12 col-12">
-                        <div class="pub-card-body">
-                            <h5 class="title">Learning Visually-Grounded Semantics from Contrastive Adversarial Samples</h5>
-                            <h6 class="authors">
-                                <u>Haoyue Shi</u>*,
-								<a href="https://jiayuanm.com" target="_blank">Jiayuan Mao</a>*,
-								<a href="http://tetexiao.com/" target="_blank">Tete Xiao</a>*,
-								<a href="https://yuningjiang.github.io/" target="_blank">Yuning Jiang</a>,
-								<a href="http://www.jiansun.org/" target="_blank">Jian Sun</a>
-                            </h6>
-                            <p class="info">
-                                <a href="http://www.coling2018.org/" class="conference">COLING 2018</a>
-                                <a href="https://aclanthology.org/C18-1315.pdf" target="_blank">Paper</a> /
-								<a href="https://github.com/ExplorerFreda/VSE-C" target="_blank">Code</a> /
-								<a href="https://arxiv.org/abs/1806.10348" target="_blank">arXiv</a>
-                            </p>
+
+                <div class="pub-card" data-topic="syntax" data-year="2021" data-selected="false" data-all-topics=syntax>
+                    <div class="row">
+                        <div class="col-r col-xs-12 col-12">
+                            <div class="pub-card-body">
+                                <h5 class="title">Video-aided Unsupervised Grammar Induction</h5>
+                                <h6 class="authors">
+                                    <u>Songyang Zhang, Linfeng Song, Lifeng Jin, Kun Xu, Dong Yu, Jiebo Luo</u>
+                                </h6>
+                                <p class="info">
+                                    North American Chapter of the Association for Computational Linguistics (NAACL), 2021
+                                    &nbsp;&nbsp;&nbsp;<a href="https://aclanthology.org/2021.naacl-main.119.pdf" target="_blank">Paper</a><br>
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="pub-card" data-topic="semantics" data-year="2018" data-selected="false" data-all-topics=semantics>
-                <div class="row">
-                    <div class="col-r col-xs-12 col-12">
-                        <div class="pub-card-body">
-                            <h5 class="title">Constructing High Quality Sense-Specific Corpus and Word Embedding via Unsupervised Elimination of Pseudo Multi-Sense</h5>
-                            <h6 class="authors">
-                                <u>Haoyue Shi</u>,
-								Xihao Wang,
-								Yuqi Sun,
-								Junfeng Hu
-                            </h6>
-                            <p class="info">
-                                <a href="http://lrec2018.lrec-conf.org/en/" class="conference">LREC 2018</a>
-                                <a href="https://aclanthology.org/L18-1154.pdf" target="_blank">Paper</a> /
-								<a href="https://github.com/ExplorerFreda/Unsupervised-Pseudo-Multi-sense-Elimination" target="_blank">Code</a>
-                            </p>
+
+                <div class="pub-card" data-topic="syntax" data-year="2020" data-selected="false" data-all-topics=syntax>
+                    <div class="row">
+                        <div class="col-r col-xs-12 col-12">
+                            <div class="pub-card-body">
+                                <h5 class="title">Visually Grounded Compound PCFGs</h5>
+                                <h6 class="authors">
+                                    <u>Yanpeng Zhao, Ivan Titov</u>
+                                </h6>
+                                <p class="info">
+                                    Empirical Methods in Natural Language Processing (EMNLP), 2020
+                                    &nbsp;&nbsp;&nbsp;<a href="https://aclanthology.org/2020.emnlp-main.354.pdf" target="_blank">Paper</a><br>
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="pub-card" data-topic="others" data-year="2017" data-selected="false" data-all-topics=others>
-                <div class="row">
-                    <div class="col-r col-xs-12 col-12">
-                        <div class="pub-card-body">
-                            <h5 class="title">Joint Saliency Estimation and Matching using Image Regions for Geo-Localization of Online Video</h5>
-                            <h6 class="authors">
-                                <u>Haoyue Shi</u>,
-								<a href="https://marshimarocj.github.io/" target="_blank">Jia Chen</a>,
-								<a href="http://www.cs.cmu.edu/~alex/" target="_blank">Alexander G. Hauptmann</a>
-                            </h6>
-                            <p class="info">
-                                <a href="#" class="conference">ICMR 2017</a>
-                                <a href="https://dl.acm.org/doi/epdf/10.1145/3078971.3078996" target="_blank">Paper</a>
-                            </p>
+
+                <div class="pub-card" data-topic="syntax" data-year="2020" data-selected="false" data-all-topics=syntax>
+                    <div class="row">
+                        <div class="col-r col-xs-12 col-12">
+                            <div class="pub-card-body">
+                                <h5 class="title">What is Learned in Visually Grounded Neural Syntax Acquisition</h5>
+                                <h6 class="authors">
+                                    <u>Noriyuki Kojima, Hadar Averbuch-Elor, Alexander M. Rush, Yoav Artzi</u>
+                                </h6>
+                                <p class="info">
+                                    Annual Meeting of the Association for Computational Linguistics (ACL), 2020
+                                    &nbsp;&nbsp;&nbsp;<a href="https://arxiv.org/pdf/2005.01678" target="_blank">Paper</a><br>
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="pub-card" data-topic="semantics" data-year="2016" data-selected="false" data-all-topics=semantics>
-                <div class="row">
-                    <div class="col-r col-xs-12 col-12">
-                        <div class="pub-card-body">
-                            <h5 class="title">Real Multi-Sense or Pseudo Multi-Sense: An Approach to Improve Word Representation</h5>
-                            <h6 class="authors">
-                                <u>Haoyue Shi</u>,
-								Caihua Li,
-								Junfeng Hu
-                            </h6>
-                            <p class="info">
-                                <a href="https://sites.google.com/site/cl4lc2016/home" class="conference">COLING Workshop CL4LC 2016</a>
-                                <a href="https://aclanthology.org/W16-4109.pdf" target="_blank">Paper</a> /
-								<a href="https://arxiv.org/abs/1701.01574" target="_blank">arXiv</a>
-                            </p>
+
+                <div class="pub-card" data-topic="syntax" data-year="2019" data-selected="false" data-all-topics=syntax>
+                    <div class="row">
+                        <div class="col-r col-xs-12 col-12">
+                            <div class="pub-card-body">
+                                <h5 class="title">Visually Grounded Neural Syntax Acquisition</h5>
+                                <h6 class="authors">
+                                    <u>Haoyue Shi*, Jiayuan Mao*, Kevin Gimpel, Karen Livescu</u>
+                                </h6>
+                                <p class="info">
+                                    Annual Meeting of the Association for Computational Linguistics (ACL), 2019
+                                    &nbsp;&nbsp;&nbsp;<a href="https://aclanthology.org/P19-1180.pdf" target="_blank">Paper</a><br>
+                                    <span class="highlight">Best Paper Nominee</span>
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-		</div>
-            </div>
+
+                <div class="pub-card" data-topic="syntax" data-year="2019" data-selected="false" data-all-topics=syntax>
+                    <div class="row">
+                        <div class="col-r col-xs-12 col-12">
+                            <div class="pub-card-body">
+                                <h5 class="title">Unsupervised Dependency Parsing with Transferring Distribution via Parallel Guidance and Entropy Regularization</h5>
+                                <h6 class="authors">
+                                    <u>Xuezhe Ma, Fei Xia</u>
+                                </h6>
+                                <p class="info">
+                                    Annual Meeting of the Association for Computational Linguistics (ACL), 2019
+                                    &nbsp;&nbsp;&nbsp;<a href="https://aclanthology.org/P14-1126.pdf" target="_blank">Paper</a><br>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            <!-- Semantics -->
+             <!-- Semantics -->
+              <!-- Semantics -->
+               <!-- Semantics -->
+                <!-- Semantics -->        
+
+                <div class="pub-card" data-topic="semantics" data-year="2021" data-selected="false" data-all-topics=semantics>
+                    <div class="row">
+                        <div class="col-r col-xs-12 col-12">
+                            <div class="pub-card-body">
+                                <h5 class="title">Grammar-Based Grounded Lexicon Learning</h5>
+                                <h6 class="authors">
+                                    <u>Jiayuan Mao, Freda Shi, Jiajun Wu, Roger Levy, Josh Tenenbaum</u>
+                                </h6>
+                                <p class="info">
+                                    Conference on Neural Information Processing Systems (NeurIPS), 2021
+                                    &nbsp;&nbsp;&nbsp;<a href="https://arxiv.org/pdf/2202.08806" target="_blank">Paper</a><br>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pub-card" data-topic="semantics" data-year="2021" data-selected="false" data-all-topics=semantics>
+                    <div class="row">
+                        <div class="col-r col-xs-12 col-12">
+                            <div class="pub-card-body">
+                                <h5 class="title">SpartQA: : A Textual Question Answering Benchmark for Spatial Reasoning</h5>
+                                <h6 class="authors">
+                                    <u>Roshanak Mirzaee, Hossein Rajaby Faghihi, Qiang Ning, Parisa Kordjmashidi</u>
+                                </h6>
+                                <p class="info">
+                                    North American Chapter of the Association for Computational Linguistics (NAACL), 2021
+                                    &nbsp;&nbsp;&nbsp;<a href="https://arxiv.org/pdf/2104.05832" target="_blank">Paper</a><br>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pub-card" data-topic="semantics" data-year="2020" data-selected="false" data-all-topics=semantics>
+                    <div class="row">
+                        <div class="col-r col-xs-12 col-12">
+                            <div class="pub-card-body">
+                                <h5 class="title">Vokenization: Improving Language Understanding with Contextualized, Visual-Grounded Supervision</h5>
+                                <h6 class="authors">
+                                    <u>Hao Tan, Mohit Bansal</u>
+                                </h6>
+                                <p class="info">
+                                    Empirical Methods in Natural Language Processing (EMNLP), 2020
+                                    &nbsp;&nbsp;&nbsp;<a href="https://aclanthology.org/2020.emnlp-main.162.pdf" target="_blank">Paper</a><br>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pub-card" data-topic="semantics" data-year="2018" data-selected="false" data-all-topics=semantics>
+                    <div class="row">
+                        <div class="col-r col-xs-12 col-12">
+                            <div class="pub-card-body">
+                                <h5 class="title">Generalization without Systematicity: On the Compositional Skills of Sequence-to-Sequence Recurrent Networks</h5>
+                                <h6 class="authors">
+                                    <u>Brenden Lake, Marco Baroni</u>
+                                </h6>
+                                <p class="info">
+                                    International Conference on Machine Learning (ICML), 2018
+                                    &nbsp;&nbsp;&nbsp;<a href="https://arxiv.org/pdf/1711.00350" target="_blank">Paper</a><br>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pub-card" data-topic="semantics" data-year="2017" data-selected="false" data-all-topics=semantics>
+                    <div class="row">
+                        <div class="col-r col-xs-12 col-12">
+                            <div class="pub-card-body">
+                                <h5 class="title">Spatial Role Labeling Annotation Scheme</h5>
+                                <h6 class="authors">
+                                    <u>Parisa Kordjamshidi, Martijn van Otterlo, Marie-Francine Moens</u>
+                                </h6>
+                                <p class="info">
+                                    Handbook of Linguistic Annotation, 2017
+                                    &nbsp;&nbsp;&nbsp;<a href="https://aclanthology.org/P17-2034.pdf" target="_blank">Paper</a><br>
+                                    <span class="highlight">Best Resource Paper Award</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pub-card" data-topic="semantics" data-year="2017" data-selected="false" data-all-topics=semantics>
+                    <div class="row">
+                        <div class="col-r col-xs-12 col-12">
+                            <div class="pub-card-body">
+                                <h5 class="title">A Corpus of Natural Language for Visual Reasoning</h5>
+                                <h6 class="authors">
+                                    <u>Alane Suhr, Mike Lewis, James Yeh, Yoav Artzi</u>
+                                </h6>
+                                <p class="info">
+                                    Annual Meeting of the Association for Computational Linguistics (ACL), 2017
+                                    &nbsp;&nbsp;&nbsp;<a href="https://aclanthology.org/P17-2034.pdf" target="_blank">Paper</a><br>
+                                    <span class="highlight">Best Resource Paper Award</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            <!-- Pragmatics -->
+             <!-- Pragmatics -->
+              <!-- Pragmatics -->
+               <!-- Pragmatics -->
+                <!-- Pragmatics -->
+
+                <div class="pub-card" data-topic="pragmatics" data-year="2023" data-selected="false" data-all-topics=pragmatics>
+                    <div class="row">
+                        <div class="col-r col-xs-12 col-12">
+                            <div class="pub-card-body">
+                                <h5 class="title">Pragmatic Inference with a CLIP Listener for Contrastive Captioning</h5>
+                                <h6 class="authors">
+                                    <u>Jiefu Ou, Benno Krojer, Daniel Fried</u>
+                                </h6>
+                                <p class="info">
+                                    Findings of the Association for Computational Linguistics: ACL (ACL Findings), 2023
+                                    &nbsp;&nbsp;&nbsp;<a href="https://arxiv.org/pdf/2306.08818" target="_blank">Paper</a><br>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pub-card" data-topic="pragmatics" data-year="2023" data-selected="false" data-all-topics=pragmatics>
+                    <div class="row">
+                        <div class="col-r col-xs-12 col-12">
+                            <div class="pub-card-body">
+                                <h5 class="title">Computational Language Acquisition with Theory of Mind</h5>
+                                <h6 class="authors">
+                                    <u>Andy Liu, Hao Zhu, Emmy Liu, Yonatan Bisk, Graham Neubig</u>
+                                </h6>
+                                <p class="info">
+                                    International Conference on Learning Representations (ICLR), 2023
+                                    &nbsp;&nbsp;&nbsp;<a href="https://arxiv.org/pdf/2303.01502" target="_blank">Paper</a><br>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pub-card" data-topic="pragmatics" data-year="2022" data-selected="false" data-all-topics=pragmatics>
+                    <div class="row">
+                        <div class="col-r col-xs-12 col-12">
+                            <div class="pub-card-body">
+                                <h5 class="title">Language Learning from Communicative Goals and Linguistic Input</h5>
+                                <h6 class="authors">
+                                    <u>Hao Zhu, Yonatan Bisk, Graham Neubig</u>
+                                </h6>
+                                <p class="info">
+                                    Annual Meeting of the Cognitive Science Society (CogSci), 2022
+                                    &nbsp;&nbsp;&nbsp;<a href="https://escholarship.org/uc/item/7p65n371" target="_blank">Paper</a><br>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="pub-card" data-topic="pragmatics" data-year="2020" data-selected="false" data-all-topics=pragmatics>
+                    <div class="row">
+                        <div class="col-r col-xs-12 col-12">
+                            <div class="pub-card-body">
+                                <h5 class="title">Interactive Classification by Asking Informative Questions</h5>
+                                <h6 class="authors">
+                                    <u>Lili Yu, Howard Chen, Sida Wang, Tao Lei, Yoav Artzi</u>
+                                </h6>
+                                <p class="info">
+                                    Annual Meeting of the Association for Computational Linguistics (ACL), 2020
+                                    &nbsp;&nbsp;&nbsp;<a href="https://arxiv.org/pdf/1911.03598" target="_blank">Paper</a><br>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pub-card" data-topic="pragmatics" data-year="2016" data-selected="false" data-all-topics=pragmatics>
+                    <div class="row">
+                        <div class="col-r col-xs-12 col-12">
+                            <div class="pub-card-body">
+                                <h5 class="title">Learning Language Games through Interaction</h5>
+                                <h6 class="authors">
+                                    <u>Sida I. Wang, Percy Liang, Christopher D. Manning</u>
+                                </h6>
+                                <p class="info">
+                                    Annual Meeting of the Association for Computational Linguistics (ACL), 2016
+                                    &nbsp;&nbsp;&nbsp;<a href="https://arxiv.org/pdf/1606.02447" target="_blank">Paper</a><br>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+            <!-- Crosslingual -->
+             <!-- Crosslingual -->
+              <!-- Crosslingual -->
+               <!-- Crosslingual -->
+                <!-- Crosslingual -->
+
+                <div class="pub-card" data-topic="crosslingual" data-year="2023" data-selected="false" data-all-topics=crosslingual>
+                    <div class="row">
+                        <div class="col-r col-xs-12 col-12">
+                            <div class="pub-card-body">
+                                <h5 class="title">Language Models are Multilingual Chain-of-Thought Reasoners</h5>
+                                <h6 class="authors">
+                                    <u>Freda Shi, Mirac Suzgun, Markus Freitag, Xuezhi Wang, Suraj Srivats, Soroush Vosoughi, Hyung Won Chung, Yi Tay, Sebastian Ruder, Denny Zhou, Dipanjan Das, Jason Wei</u>
+                                </h6>
+                                <p class="info">
+                                    International Conference on Learning Representations (ICLR), 2023
+                                    &nbsp;&nbsp;&nbsp;<a href="https://arxiv.org/pdf/2006.09526" target="_blank">Paper</a><br>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pub-card" data-topic="crosslingual" data-year="2020" data-selected="false" data-all-topics=crosslingual>
+                    <div class="row">
+                        <div class="col-r col-xs-12 col-12">
+                            <div class="pub-card-body">
+                                <h5 class="title">Cross-lingual Retrieval for Iterative Self-Supervised Training</h5>
+                                <h6 class="authors">
+                                    <u>Chau Tran, Yuqing Tang, Xian Li, Jiatao Gu</u>
+                                </h6>
+                                <p class="info">
+                                    Conference on Neural Information Processing Systems (NeurIPS), 2020
+                                    &nbsp;&nbsp;&nbsp;<a href="https://arxiv.org/pdf/2006.09526" target="_blank">Paper</a><br>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pub-card" data-topic="crosslingual" data-year="2020" data-selected="false" data-all-topics=crosslingual>
+                    <div class="row">
+                        <div class="col-r col-xs-12 col-12">
+                            <div class="pub-card-body">
+                                <h5 class="title">On the Cross-lingual Transferability of Monolingual Representations</h5>
+                                <h6 class="authors">
+                                    <u>Mikel Artetxe, Sebastian Ruder, Dani Yogatama</u>
+                                </h6>
+                                <p class="info">
+                                    Annual Meeting of the Association for Computational Linguistics (ACL), 2020
+                                    &nbsp;&nbsp;&nbsp;<a href="https://arxiv.org/pdf/1910.11856" target="_blank">Paper</a><br>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
         </div>
 
         <div class="main-more-container" id="bibtex">
@@ -754,7 +955,7 @@
 <pre><code>@proceedings{naacl2025grounding,
     author    = {Shi, Freda and Ma, Ziqiao and Mao, Jiayuan and Kordjamshidi, Parisa and Chai, Joyce},
     title     = {Learning Language through Grounding},
-    booktitle = "Proceedings of the 2025 Annual Conference of the Nations of the Americas Chapter of the Association for Computational Linguistics (Volume 5: Tutorial Abstracts)",
+    booktitle = {Proceedings of the 2025 Annual Conference of the Nations of the Americas Chapter of the Association for Computational Linguistics (Volume 5: Tutorial Abstracts)},
     year      = {2025},
 }</code></pre>
             </div>
