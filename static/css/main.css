@@ -305,15 +305,21 @@ div.container a:visited {
 }
 
 #main-pub-container pre {
-    background-color: #f5f5f5; /* Light grey */
-    padding: 15px; /* Add padding for better spacing */
-    border-radius: 5px; /* Optional rounded corners */
-    overflow-x: auto; /* Enable horizontal scrolling for long code */
-    font-family: monospace; /* Use a monospace font for code */
+    background-color: #f5f5f5;
+    /* Light grey */
+    padding: 15px;
+    /* Add padding for better spacing */
+    border-radius: 5px;
+    /* Optional rounded corners */
+    overflow-x: auto;
+    /* Enable horizontal scrolling for long code */
+    font-family: monospace;
+    /* Use a monospace font for code */
 }
 
 #main-pub-container code {
-    color: #333; /* Dark grey text color for better contrast */
+    color: #333;
+    /* Dark grey text color for better contrast */
 }
 
 
@@ -405,10 +411,10 @@ div.container a:visited {
 }
 
 #main-pub-card-container .pub-card .authors {
-    font-weight: 400;
+    font-weight: 600;
     color: #666666;
     margin-bottom: 4px;
-    line-height: 1.4
+    line-height: 1.4;
 }
 
 #main-pub-card-container .pub-card .authors a {
@@ -417,7 +423,7 @@ div.container a:visited {
 
 #main-pub-card-container .pub-card .authors u {
     color: #333333;
-    font-weight: 600;
+    font-weight: 400;
     text-decoration: none
 }
 
@@ -435,6 +441,7 @@ div.container a:visited {
 
 #main-pub-card-container .pub-card .info {
     margin-bottom: 0;
+    font-style: italic;
 }
 
 #main-pub-card-container .row {
