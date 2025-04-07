@@ -44,7 +44,7 @@ if __name__ == '__main__':
         topics = [x.strip() for x in item['keywords'].split(',')]
         selected = True if 'selected' in topics else False
         title = item['title']
-        link = '#'
+        link = '#' if 'url' not in item else item['url']
         note = item['note'] if 'note' in item else ''
         if item.entry_type == 'phdthesis':
             site = f'PhD Thesis, {item["school"]}'
