@@ -1,5 +1,5 @@
 import argparse
-import bibtexparser
+import bibtexparser  # pip install --no-cache-dir --force-reinstall git+https://github.com/sciunto-org/python-bibtexparser@main
 
 
 _PAPER_TEMPLATE = '''
@@ -50,6 +50,7 @@ if __name__ == '__main__':
             site = f'PhD Thesis, {item["school"]}'
         else:
             site = item['journal'] if 'journal' in item else item['booktitle']
+        site += f' {item["year"]}'
         entry = _PAPER_TEMPLATE.format(
             topics=','.join(topics),
             year=year,
