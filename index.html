@@ -154,9 +154,14 @@
         <div class="main-more-container" id="materials">
             <div class="main-bio-container">
 
-                <h4 class="subtitle" style="margin-top:25px">Materials</h4>
+                <h3 class="subtitle" style="margin-top:25px">Materials (180 minutes)</h3>
 
-                <h5 class="subtitle" style="margin-top:25px">Part I (20 minutes): Introduction to grounding.</h5>
+                <h4 class="subtitle" style="margin-top:25px">
+                    Part I (15 minutes): Introduction to grounding.
+                    [Slides] [Video]
+                </h4>
+
+                <h5 class="subtitle">Presenter: Freda Shi</h5>
 
                 <p style="margin-bottom:5px;">
                     We will review the history of grounding, and introduce the unified definition of grounding.
@@ -164,33 +169,45 @@
                     from another source, where the two sources of data have positive mutual information.
                     We will exemplify the definition through connection to existing work such as visual grounding,
                     acoustic grounding, factual grounding, and cross-lingual grounding.
-                    We refer to <a href="https://aclanthology.org/2020.acl-tutorials.3/">ACL 2020 Tutorial 5</a> on
+                </p>
+                <p style="margin-bottom:5px;">
+                    We refer to <a href="https://spatial-language-tutorial.github.io/">NAACL 2024 Tutorial 6</a> on
+                    spatial and temporal grounding,
+                    <a href="https://aclanthology.org/2020.acl-tutorials.3/">ACL 2020 Tutorial 5</a> on
                     building common ground through communication, and
                     <a href="https://videolectures.net/videos/aaai2013_mooney_language_learning">AAAI 2013 Keynote</a>
                     for early work on grounded language learning.
                 </p>
 
-                <h5 class="subtitle" style="margin-top:25px">Part II (30 minutes): Learning lexicons through grounding.
-                </h5>
+                <h4 class="subtitle" style="margin-top:25px">
+                    Part II (25 minutes): Learning lexicons through grounding.
+                    [Slides] [Video]
+                </h4>
+
+                <h5 class="subtitle">Presenter: Martin Ziqiao Ma</h5>
 
                 <p style="margin-bottom:5px;">
-                    Word acquisition has been a fundamental problem in language acquisition concerned by both cognitive
-                    science and robotics.
-                    With the advancement of neural networks and multimodal machine learning, there has been work on
-                    learning the meanings of written or spoken words by grounding language to visual signals.
-                    Particularly, there has been work focusing on grounding verb semantics to the change of the physical
+                    Word acquisition is a core challenge in both cognitive science and robotics.
+                    Recent advances in neural networks and multimodal machine learning have enabled efforts to
+                    ground the meanings of written and spoken words in visual signals.
+                    In this talk, we will explore research on grounding noun and verb meanings through changes in the physical
                     world.
-                    Another line of work on learning lexicons through cross-lingual grounding.
+                    We will also briefly discuss extensions of lexicon grounding beyond the visual modality,
+                    as well as approaches to bootstrapping grounded word acquisition through meta-learning.
                 </p>
                 <p style="margin-bottom:5px;">
                     In the first 10 minutes, we will introduce the background and focus on recent advances in the
                     remaining time.
-                    Work on learning lexical semantics through interaction or learning lexicon to compose sentence-level
-                    meanings will be deferred to Part IV.
+                    Work on vision-language models, learning lexical semantics through interaction or
+                    learning lexicon to compose sentence-level meanings will be deferred to Part IV.
                 </p>
 
-                <h5 class="subtitle" style="margin-top:25px">Part III (30 minutes): Learning syntax through grounding.
-                </h5>
+                <h4 class="subtitle" style="margin-top:25px">
+                    Part III (25 minutes): Learning syntax through grounding.
+                    [Slides] [Video]
+                </h4>
+
+                <h5 class="subtitle">Presenter: Freda Shi</h5>
 
                 <p style="margin-bottom:5px;">
                     Constituency parses of sentences can be learned by grounding to visual signals.
@@ -211,28 +228,89 @@
                     Efforts on joint learning of syntax and semantics will be delivered in Part IV.
                 </p>
 
-                <h5 class="subtitle" style="margin-top:25px">Part IV (60 minutes): Learning complex meanings (semantics
-                    and pragmatics) through grounding.</h5>
+                <!-- <h4 class="subtitle" style="margin-top:25px">
+                    Coffee Break (10 minutes)
+                </h4> -->
+
+                <h4 class="subtitle" style="margin-top:25px">
+                    Part IV (100 minutes): Learning complex meanings (semantics and pragmatics) through grounding.
+                </h4>
+
+                <h5 class="subtitle" style="margin-top:25px">
+                    Part IV-1 (25 minutes): Learning concepts through grounding.
+                    [Slides] [Video]
+                </h5>
+
+                <h5 class="subtitle">Presenter: Jiayuan Mao</h5>
 
                 <p style="margin-bottom:5px;">
-                    It has attracted significant interest in learning and evaluating meaning acquisition in visually
-                    grounded settings.
-                    In addition to visual grounding, interaction is also a common source of supervision, where
-                    considerations regarding pragmatics and theory of mind are often taken into account.
-                    Similarly to what has been mentioned in Part II, cross-lingual transfer on sentence or
-                    document-level meanings,
-                    particularly transferring knowledge from high-resource to low-resource languages, should also be
-                    considered as instantiations of cross-lingual grounding.
-
+                    Grounded lexicon learning and grounded syntax learning come together to enable the formation of complex,
+                    compositional grounded concepts.
+                    Lexicon learning maps individual words to grounded perceptual or executable representations,
+                    while syntax learning governs how these word-level representations are composed into structured meanings.
+                    By integrating both, models can not only learn visual or perceptual concepts from language
+                    but also generalize to novel compositions, facilitating systematic and interpretable understanding
+                    of grounded semantics across diverse domains.
                 </p>
+
+                <h5 class="subtitle" style="margin-top:25px">
+                    Part IV-2 (25 minutes): Grounding language to world representations: The case of space.
+                    [Slides] [Video]
+                </h5>
+
+                <h5 class="subtitle">Presenter: Parisa Kordjamshidi</h5>
+
                 <p style="margin-bottom:5px;">
-                    This part will cover three topics for 20 minutes each: learning semantics through grounding,
-                    learning pragmatics through grounded interaction,
-                    and learning cross-lingual text representations through cross-lingual grounding.
+                    We cover how spatial semantics are represented, the available datasets and annotations,
+                    and the connection between information extraction models, qualitative spatial reasoning,
+                    and end-to-end deep learning approaches.
+                    We review recent large language models for spatial language comprehension, their evaluation,
+                    and the key limitations and challenges in this area.
+                    We clarify the role of spatial language in downstream applications,
+                    highlighting tasks such as grounding language in the visual world for navigation, wayfinding agents,
+                    human-machine interaction, and situated dialogue systems.
                 </p>
 
-                <h5 class="subtitle" style="margin-top:25px">Part V (15 minutes): Discussion on future directions and
-                    open problems.</h5>
+                <h5 class="subtitle" style="margin-top:25px">
+                    Part IV-3 (25 minutes): Scaling vision-language models with grounding.
+                    [Slides] [Video]
+                </h5>
+
+                <h5 class="subtitle">Presenter: Martin Ziqiao Ma</h5>
+
+                <p style="margin-bottom:5px;">
+                    While modern vision-language models (VLMs) have made remarkable progress,
+                    achieving fine-grained grounding of linguistic units to perceptual referents remains an open challenge.
+                    We will review recent advances in mechanistically grounded VLMs, spanning both encoder-based and generative
+                    ones.
+                    We highlight how these models offer more detailed perceptual understanding and greater interpretability,
+                    providing new insights into the mechanisms underlying grounded language acquisition.
+                </p>
+
+                <h5 class="subtitle" style="margin-top:25px">
+                    Part IV-4 (25 minutes): Learning pragmatics through grounding.
+                    [Slides] [Video]
+                </h5>
+
+                <h5 class="subtitle">Presenter: Joyce Chai</h5>
+
+                <p style="margin-bottom:5px;">
+                    Grounded interaction provides a powerful source of supervision for language learning,
+                    connecting linguistic expressions directly to perception and action.
+                    Beyond mapping words to perceptual referents, successful communication requires models
+                    to interpret language in context — leveraging shared goals, conventions, and the visual and embodied
+                    environment.
+                    We discuss research on grounded settings and pragmatic modeling, analyzing how grounding
+                    in physical and social contexts shapes linguistic meaning, and how task goals, environmental structure,
+                    and communicative affordances enrich the process of language grounding.
+                </p>
+
+                <h4 class="subtitle" style="margin-top:25px">
+                    Part V (15 minutes): Future directions and open problems.
+                    [Slides] [Video]
+                </h4>
+
+                <h5 class="subtitle">Presenter: Freda Shi</h5>
 
                 <p style="margin-bottom:5px;">
                     A key discussion for future directions centers around whether grounding should emerge naturally from
@@ -1305,7 +1383,7 @@
                 <pre><code>@proceedings{naacl2025grounding,
     author    = {Shi, Freda and Ma, Ziqiao and Mao, Jiayuan and Kordjamshidi, Parisa and Chai, Joyce},
     title     = {Learning Language through Grounding},
-    booktitle = {Proceedings of the 2025 Annual Conference of the Nations of the Americas Chapter of the Association for Computational Linguistics (Volume 5: Tutorial Abstracts)},
+    booktitle = {Proceedings of the 2025 Annual Conference of the Nations of the Americas Chapter of the Association for Computational Linguistics: Human Language Technologies (Volume 5: Tutorial Abstracts)},
     year      = {2025},
 }</code></pre>
             </div>
